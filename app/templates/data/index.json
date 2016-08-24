@@ -1,0 +1,205 @@
+{
+	"list": {
+		"image": "pictures/img15.jpg",
+		"item": [
+			{
+				"type": "standard",
+				"date": "12 березня 2016 р.",
+				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, tenetur repellendus sapiente tenetur odio repellendus sapiente tenetur odio"
+			},
+			{
+				"type": "landscape",
+				"date": "12 березня 2016 р.",
+				"title": "Lorem ipsum dolor sit"
+			},
+			{
+				"type": "standard",
+				"date": "12 березня 2016 р.",
+				"title": "Nemo tempore veritatis vero"
+			},
+			{
+				"type": "standard",
+				"date": "12 березня 2016 р.",
+				"title": "Voluptas ab accusamus in cum sunt, repellendus non?"
+			},
+			{
+				"type": "standard",
+				"date": "12 березня 2016 р.",
+				"title": "Cupiditate aspernatur velit asperiores, minima est repellendus sapiente tenetur odio repellendus sapiente tenetur odio"
+			},
+			{
+				"type": "standard",
+				"date": "12 березня 2016 р.",
+				"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, tenetur dolor sit amet, consectetur adipisicing elit. Dolorum, tenetur"
+			}
+		]
+	},
+
+	"about": {
+		"image-1": "pictures/img1.jpg",
+		"image-2": "",
+		"image-3": "pictures/img11.jpg",
+		"image-4": "pictures/img12.jpg",
+		"image-5": "pictures/img7.jpg",
+		"image-6": "pictures/img8.jpg",
+		"image-7": "pictures/img9.jpg",
+		"image-8": "pictures/img6.jpg",
+		"image-9": "pictures/img3.jpg",
+		"image-10": "pictures/img6.jpg",
+
+		"logo-1": [
+			{
+				"image": "img/logos/logo-1.png"
+			},
+			{
+				"image": "img/logos/logo-2.png"
+			},
+			{
+				"image": "img/logos/logo-3.png"
+			}
+		],
+		"logo-2": [
+			{
+				"image": "img/logos/logo-4.png"
+			},
+			{
+				"image": "img/logos/logo-5.png"
+			},
+			{
+				"image": "img/logos/logo-6.png"
+			},
+			{
+				"image": "img/logos/logo-7.png"
+			}
+		]
+	},
+
+	"portfolio": [
+		{
+			"title": "SOLVER",
+			"subtitle": "Lorem ipsum dolor sit amet",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img15.jpg"
+				},
+				{
+					"img": "pictures/img9.jpg"
+				},
+				{
+					"img": "pictures/img9.jpg"
+				}
+			]
+		},
+		{
+			"title": "ROMATY NEREW",
+			"subtitle": "Lorem ipsum dolor sit amet",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img14.jpg"
+				},
+				{
+					"img": "pictures/img14.jpg"
+				},
+				{
+					"img": "pictures/img15.jpg"
+				}
+			]
+		},
+		{
+			"title": "PROYAR LPT",
+			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img15.jpg"
+				},
+				{
+					"img": "pictures/img16.jpg"
+				},
+				{
+					"img": "pictures/img16.jpg"
+				}
+			]
+		},
+		{
+			"title": "POLAROID",
+			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img15.jpg"
+				},
+				{
+					"img": "pictures/img12.jpg"
+				},
+				{
+					"img": "pictures/img12.jpg"
+				}
+			]
+		},
+		{
+			"title": "ROMATY NEREW",
+			"subtitle": "Lorem ipsum dolor sit amet",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img1.jpg"
+				},
+				{
+					"img": "pictures/img14.jpg"
+				},
+				{
+					"img": "pictures/img14.jpg"
+				}
+			]
+		},
+		{
+			"title": "PROYAR LPT",
+			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img15.jpg"
+				},
+				{
+					"img": "pictures/img16.jpg"
+				},
+				{
+					"img": "pictures/img16.jpg"
+				}
+			]
+		},
+		{
+			"title": "SOLVER",
+			"subtitle": "Lorem ipsum dolor sit amet",
+			"text-1": "мінеральна вата",
+			"text-2": "39 000 кв. м.",
+			"text-3": "2016 р.",
+			"images": [
+				{
+					"img": "pictures/img9.jpg"
+				},
+				{
+					"img": "pictures/img9.jpg"
+				},
+				{
+					"img": "pictures/img11.jpg"
+				}
+			]
+		}
+	]
+}

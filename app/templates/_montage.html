@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Termobud - montage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/app.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="">
+
+	<div class="content-wrapper montage">
+		{{ > header }}
+		{{ > montage/step-1 }}
+		{{ > montage/step-2 }}
+		{{ > montage/step-3 }}
+		{{ > montage/step-4 }}
+		{{ > montage/step-5 }}
+		{{ > montage/step-6 }}
+		{{ > footer }}
+		{{ > lines }}
+	</div>
+
+	<script src="js/build/index.min.js"></script>
+
+	<script src='//localhost:3000/socket.io/socket.io.js'></script>
+	<script src='//localhost:3001/client/browser-sync-client.min.js'></script>
+</body>
+</html>

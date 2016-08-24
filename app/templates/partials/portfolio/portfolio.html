@@ -1,0 +1,24 @@
+<div class="projects-wrapper">
+	<div class="wrapper">
+
+		{{#portfolio}}
+		<div class="project">
+			<div class="wrapper">
+				<div class="title-step">
+					<h2>{{{title}}}</h2>
+					<p class="sub">{{{subtitle}}}</p>
+					<p><span>Наповнювач: </span>{{{text-1}}}</p>
+					<p><span>Площа: </span>{{{text-1}}}</p>
+					<p><span>Рік: </span>{{{text-1}}}</p>
+				</div>
+				<div class="image-wrapper">
+					{{#images}}
+					<div class="image" style="background:url('{{{img}}}') no-repeat center/cover fixed"></div>
+					{{/images}}
+				</div>
+			</div>
+		</div>
+		{{/portfolio}}
+
+	</div>
+</div>

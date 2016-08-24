@@ -1,0 +1,24 @@
+<!-- title -->
+<div class="title-step">
+	<h2>Блог</h2>
+	<p class="sub">Статті про вибір сендвіч-панелей,<br>правила монтажу</p>
+</div>
+
+<!-- list -->
+<div class="list">
+	<div class="items-wrapper">
+		{{#list.item}}
+		<div class="item" type="{{{type}}}">
+			<p class="date">{{{date}}}</p>
+			<h4 class="title">{{{title}}}</h4>
+			<a href="#" class="more">Читати повністю</a>
+		</div>
+		{{/list.item}}
+	</div>
+</div>
+
+<!-- image -->
+<div class="image-wrapper">
+	<div class="image image-1" style="background:url('{{{list.image}}}') no-repeat center/cover fixed"></div>
+	<div class="image image-2" style="background:url('{{{list.image}}}') no-repeat center/cover fixed"></div>
+</div>

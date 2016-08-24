@@ -1,0 +1,35 @@
+.montage {
+
+	.step {
+		position: relative;
+		height: 100vh;
+
+		.wrapper {
+			width: 100%;
+			height: calc(100vh - 2vw);
+			position: relative;
+		}
+
+		.video {
+			width: 100%;
+			height: 100%;
+			video {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		// image
+		.item-wrapper {
+			.item {
+				background: #fff;
+			}
+		}
+	}
+
+	@import 'step-1';
+	@import 'step-2';
+	@import 'step-3';
+	@import 'step-4';
+}
+

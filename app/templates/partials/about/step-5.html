@@ -1,0 +1,28 @@
+<div class="step step-5">
+	<div class="wrapper">
+		<div class="title-step">
+			<h2>Відгуки</h2>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quasi, at. Ab praesentium quos natus!</p>
+			</div>
+		</div>
+	</div>
+	<div class="reviews-wrapper">
+		<div class="items">
+			{{#reviews.item}}
+			<div class="item">
+				<div class="photo" style="background:url('{{{photo}}}') no-repeat center/cover fixed"></div>
+				<div class="content">
+					<p class="name">{{{name}}}</p>
+					<p class="office">{{{office}}}</p>
+					<p class="text">{{{text}}}</p>
+				</div>
+			</div>
+			{{/reviews.item}}
+		</div>
+		<div class="controll">
+			<div class="prew"></div>
+			<div class="next"></div>
+		</div>
+	</div>
+</div>
