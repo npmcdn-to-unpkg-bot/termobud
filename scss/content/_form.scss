@@ -1,0 +1,36 @@
+.form-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 10;
+	padding: 0 16vw;
+	.tab {
+		display: table;
+		width: 100%;
+		height: 100%;
+		.cel {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	form {
+		max-width: 600px;
+		input:not(.button), textarea {
+			display: block;
+			width: 100%;
+			margin: 4vh 0;
+			outline: none;
+			padding: 3vh 2vw;
+			border: 1px solid;
+			border-color: transparent transparent #000 transparent;
+		}
+		.button {
+			outline: none;
+			background: none;
+		}
+	}
+}

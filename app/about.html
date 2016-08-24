@@ -126,14 +126,14 @@
 </div><div class="step step-1">
 	<div class="wrapper">
 		<div class="title-step">
-			<h2>Три заводи</h2>
+			<h2><span class="num">3</span>фірмові<br>заводи</h2>
 			<div class="text">
-				<p class="sub"> виготовляємо всі види сендвіч панелей</p>
+				<p class="sub">виготовляємо всі види сендвіч панелей</p>
 				<p><span>м. Червоноград</span>, Львівська обл.<br>
 					<span>с. Кринички</span>, Миколаївська обл.<br>
 					<span>м. Тернопіл</span>
 				</p>
-				<p>Виготовляється 3 млн. кв. м. сендвіч-плити<br>за рік на трьох заводах</p>
+				<p>Виготовляється 3 млн. кв. м. сендвіч-плити за рік на трьох заводах</p>
 			</div>
 		</div>
 		<div class="item-wrapper">
@@ -155,7 +155,10 @@
 		<div class="title-step">
 			<h2>"PUMA"</h2>
 			<div class="text">
-				<p>Італійське обладнання останнього (п’ятого) покоління<br>Автоматизований процес виробництва</p>
+				<p class="sub sub-1">Італійське обладнання</p>
+				<p>останнього (п’ятого) покоління</p>
+				<p class="sub sub-2">Автоматизований</p>
+				<p>процес виробництва</p>
 			</div>
 		</div>
 		<div class="item-wrapper">
@@ -168,25 +171,17 @@
 	<div class="wrapper">
 		<div class="title-step">
 			<h2>Доставка</h2>
+			<p class="sub sub-1">частинами до часу<br>монтажу</p>
 			<div class="text">
-				<p>частинами до часу монтажу</p>
-			</div>
-			<p class="sub">17 власних авто</p>
-			<div class="text">
+				<p class="sub sub-2">17 власних авто</p>
 				<p>Наш інженер веде всі проекти<br>від подачі заявки до монтажу</p>
 			</div>
 		</div>
 		<div class="item-wrapper">
-			<div class="item item-1" style="background:url('pictures/img8.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-1" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
 			<div class="item item-2" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
-			<div class="item item-3" style="background:url('pictures/img6.jpg') no-repeat center/cover fixed"></div>
-			<div class="item item-4">
-				<div class="video">
-					<video id="video-about-2" preload="none" loop autoplay>
-						<source src="video/video5.mp4" type="video/mp4">
-					</video>
-				</div>
-			</div>
+			<div class="item item-3" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-4" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
 		</div>
 	</div>
 </div>
@@ -236,13 +231,20 @@
 </div><div class="step step-6">
 	<div class="wrapper">
 		<div class="title-step">
-			<h2>Звяжіться<br>з нами</h2>
+			<h2>Напишіть нам</h2>
 			<div class="text">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quasi, at. Ab praesentium quos natus!</p>
+				<p class="sub">Ми готові допомогти вам<br>в будь-якому питанню</p>
+				<p><a href="#" class="button">Задати питання</a></p>
 			</div>
 		</div>
+		<div class="item-wrapper">
+			<div class="item item-1" style="background:url('pictures/img1.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-2" style="background:url('pictures/img1.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-3" style="background:url('pictures/img1.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-4" style="background:url('pictures/img1.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-5" style="background:url('pictures/img1.jpg') no-repeat center/cover fixed"></div>
+		</div>
 	</div>
-	
 </div><footer>
 	<div class="logo">
 		<div>
@@ -261,6 +263,18 @@
 	<span><span></span></span>
 </div>	</div>
 
+<div class="form-wrapper">
+	<div class="tab">
+		<div class="cel">
+			<form method="POST" id="formx" action="javascript:void(null);" onsubmit="form()" autocomplete="off">
+				<input class="form-cont" name="name" type="text" data-title="form" key="name" placeholder="Ім'я" required="">
+				<input class="form-cont" name="mail-phone" type="email-phone" data-title="form" key="mail-phone" placeholder="E-mail / phone" required="">
+				<textarea class="form-cont" name="message" id="" cols="30" rows="7" key="text" data-title="form" placeholder="Текст повідомлення" required=""></textarea>
+				<input class="button form-cont" data-title="form" type="submit" key="submit" value="Надіслати">
+			</form>
+		</div>
+	</div>
+</div>
 	<script src="js/build/index.min.js"></script>
 
 	<script src='//localhost:3000/socket.io/socket.io.js'></script>

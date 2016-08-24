@@ -1462,16 +1462,17 @@ th.hide-for-touch {
     line-height: 130%; }
   .title-step .text {
     max-width: calc(22vw - 1.6vw); }
-  .title-step .button {
-    margin: 2vw 0 0 0;
-    padding: 11px 36px 12px;
-    border: 1px solid #5498d5;
-    display: inline-block;
-    font-weight: 400;
-    color: #5498d5;
-    text-decoration: none; }
   .title-step p span {
     font-weight: 500; }
+
+.button {
+  margin: 2vw 0 0 0;
+  padding: 11px 36px 12px;
+  border: 1px solid #5498d5;
+  display: inline-block;
+  font-weight: 400;
+  color: #5498d5;
+  text-decoration: none; }
 
 .lines {
   position: fixed;
@@ -1571,7 +1572,8 @@ a {
   outline: none !important; }
 
 p {
-  margin: 32px 0; }
+  margin: 32px 0;
+  line-height: 160%; }
 
 footer {
   padding: 1vw 0 2vw 1vw;
@@ -1823,11 +1825,13 @@ footer {
     position: relative;
     width: 100%;
     height: 100%; }
-  .home-page .step-2 .title-step h2, .home-page .step-2 .title-step .sub {
-    margin: 0; }
-  .home-page .step-2 .title-step h2 {
-    position: relative;
-    left: -3px; }
+  .home-page .step-2 .title-step {
+    margin-left: 10%; }
+    .home-page .step-2 .title-step h2, .home-page .step-2 .title-step .sub {
+      margin: 0; }
+    .home-page .step-2 .title-step h2 {
+      position: relative;
+      left: -3px; }
   .home-page .step-2 .buttons-wrapper {
     position: relative;
     top: 3vw;
@@ -2409,6 +2413,29 @@ footer {
       height: 100%; }
   .about .step .item-wrapper .item {
     background: white; }
+.about .step-1 .title-step {
+  margin-left: 17%;
+  padding: 10vw 1vw 0; }
+  .about .step-1 .title-step h2 {
+    margin: 0 0 3vw 0;
+    position: relative;
+    line-height: 85%; }
+    .about .step-1 .title-step h2 .num {
+      font-size: 16vw;
+      letter-spacing: -3vw;
+      color: #d2d2d2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-60%, -65%);
+      z-index: -1; }
+  .about .step-1 .title-step .text {
+    position: relative;
+    left: 3vw;
+    max-width: 15vw;
+    line-height: 160%; }
+    .about .step-1 .title-step .text .sub {
+      margin: 0; }
 .about .step-1 .item-wrapper {
   position: absolute;
   top: 0;
@@ -2420,24 +2447,41 @@ footer {
     left: 0; }
     .about .step-1 .item-wrapper .item.item-1 {
       bottom: 0;
-      left: calc(16.666666666666668% * 2 + 3px);
+      left: 4px;
       height: 30%;
-      width: calc(16.666666666666668% * 2 - 8px); }
+      width: calc(16.666666666666668% * 1 - 8px);
+      -webkit-filter: grayscale(100%);
+      opacity: 0.1; }
     .about .step-1 .item-wrapper .item.item-2 {
+      display: none;
       top: 20%;
       left: calc(16.666666666666668% * 3 + 3px);
       height: 50%;
       width: calc(16.666666666666668% - 8px); }
     .about .step-1 .item-wrapper .item.item-3 {
-      top: 0;
-      left: calc(16.666666666666668% * 4 - -4px);
-      height: 80%;
-      width: calc(16.666666666666668% - 9px); }
+      bottom: 0;
+      left: calc(16.666666666666668% * 3 - -4px);
+      height: 60%;
+      width: calc(16.666666666666668% * 1 - 9px);
+      -webkit-filter: grayscale(100%);
+      opacity: 0.1; }
     .about .step-1 .item-wrapper .item.item-4 {
       top: 0;
-      left: calc(16.666666666666668% * 5 + 4px);
-      height: 45%;
-      width: calc(16.666666666666668% - 8px); }
+      left: calc(16.666666666666668% * 4 + 4px);
+      height: 70%;
+      width: calc(16.666666666666668% * 2 - 8px); }
+.about .step-2 .title-step {
+  margin-left: 16%; }
+  .about .step-2 .title-step .text {
+    max-width: 15vw;
+    position: relative;
+    left: 3vw; }
+    .about .step-2 .title-step .text p {
+      margin: 0; }
+    .about .step-2 .title-step .text .sub-1 {
+      margin: 4vw 0 8px 0; }
+    .about .step-2 .title-step .text .sub-2 {
+      margin: 2vw 0 8px 0; }
 .about .step-2 .item-wrapper {
   position: absolute;
   top: 0;
@@ -2451,19 +2495,28 @@ footer {
       bottom: 0;
       height: 30%;
       left: calc(16.666666666666668% * 2 + 4px);
-      width: calc(16.666666666666668% * 1 - 9px); }
+      width: calc(16.666666666666668% * 1 - 9px);
+      -webkit-filter: grayscale(100%);
+      opacity: 0.1; }
     .about .step-2 .item-wrapper .item.item-2 {
       bottom: 0;
       left: calc(16.666666666666668% * 3 + 4px);
-      height: 60%;
+      height: 70%;
       width: calc(16.666666666666668% * 2 - 9px); }
     .about .step-2 .item-wrapper .item.item-3 {
+      display: none;
       top: 0;
       left: calc(16.666666666666668% * 5 + 4px);
       height: 70%;
       width: calc(16.666666666666668% - 7px); }
-.about .step-3 .title-step .sub {
-  margin: 8vw 0 0 0; }
+.about .step-3 .title-step h2 {
+  margin: 0 0 16px 0; }
+.about .step-3 .title-step .sub-1 {
+  margin: 0; }
+.about .step-3 .title-step .text .sub-2 {
+  margin: 4vw 0 8px 0; }
+.about .step-3 .title-step .text p {
+  margin: 0; }
 .about .step-3 .item-wrapper {
   position: absolute;
   top: 0;
@@ -2474,21 +2527,24 @@ footer {
     position: absolute;
     left: 0; }
     .about .step-3 .item-wrapper .item.item-1 {
-      top: 30%;
-      height: 40%;
-      left: calc(16.666666666666668% * 4 + 4px);
-      width: calc(16.666666666666668% - 9px); }
-    .about .step-3 .item-wrapper .item.item-2 {
       bottom: 0;
       left: calc(16.666666666666668% * 2 + 3px);
       height: 30%;
       width: calc(16.666666666666668% * 2 - 8px); }
+    .about .step-3 .item-wrapper .item.item-2 {
+      bottom: 0%;
+      height: 70%;
+      left: calc(16.666666666666668% * 4 + 4px);
+      width: calc(16.666666666666668% - 9px); }
     .about .step-3 .item-wrapper .item.item-3 {
       top: 0;
       left: calc(16.666666666666668% * 5 + 4px);
       height: 70%;
-      width: calc(16.666666666666668% * 1 - 9px); }
+      width: calc(16.666666666666668% * 1 - 9px);
+      -webkit-filter: grayscale(100%);
+      opacity: 0.1; }
     .about .step-3 .item-wrapper .item.item-4 {
+      display: none;
       top: 0;
       left: calc(16.666666666666668% * 3 + 4px);
       height: 40%;
@@ -2544,6 +2600,33 @@ footer {
     position: absolute; }
     .about .step-5 .reviews-wrapper .items .item {
       position: absolute; }
+.about .step-6 .item-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .about .step-6 .item-wrapper .item {
+    position: absolute;
+    left: 0; }
+    .about .step-6 .item-wrapper .item.item-1 {
+      display: none; }
+    .about .step-6 .item-wrapper .item.item-2 {
+      bottom: 0;
+      left: calc(16.666666666666668% * 2 + 3px);
+      height: 30%;
+      width: calc(16.666666666666668% * 1 - 8px); }
+    .about .step-6 .item-wrapper .item.item-3 {
+      bottom: 0;
+      left: calc(16.666666666666668% * 3 + 3px);
+      height: 60%;
+      width: calc(16.666666666666668% * 2 - 8px);
+      -webkit-filter: grayscale(100%);
+      opacity: 0.1; }
+    .about .step-6 .item-wrapper .item.item-4 {
+      display: none; }
+    .about .step-6 .item-wrapper .item.item-5 {
+      display: none; }
 
 .projects-wrapper .wrapper .project:nth-child(4n+1) .image-wrapper .image:nth-child(1) {
   bottom: 0;
@@ -2714,7 +2797,7 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-65%, -44%);
+      transform: translate(-65%, -63%);
       z-index: -1; }
   .montage .step-2 .title-step .text {
     position: relative;
@@ -2905,3 +2988,33 @@ footer {
           width: 20px;
           height: 1px;
           background: #848484; }
+
+.form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 10;
+  padding: 0 16vw; }
+  .form-wrapper .tab {
+    display: table;
+    width: 100%;
+    height: 100%; }
+    .form-wrapper .tab .cel {
+      display: table-cell;
+      vertical-align: middle; }
+  .form-wrapper form {
+    max-width: 600px; }
+    .form-wrapper form input:not(.button), .form-wrapper form textarea {
+      display: block;
+      width: 100%;
+      margin: 4vh 0;
+      outline: none;
+      padding: 3vh 2vw;
+      border: 1px solid;
+      border-color: transparent transparent black transparent; }
+    .form-wrapper form .button {
+      outline: none;
+      background: none; }
