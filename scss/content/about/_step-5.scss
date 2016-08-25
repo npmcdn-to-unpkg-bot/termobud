@@ -10,8 +10,123 @@
 		height: 100%;
 		.items {
 			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 			.item {
 				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				&.active {
+					.photo {
+						width: calc(16.666666666666668% * 1 - 8px);
+					}
+					.content {
+						width: calc(16.666666666666668% * 2 - 9px);
+					}
+				}
+				.photo {
+					transition: width .6s 0s ease;
+					position: absolute;
+					top: 30%;
+					left: calc(16.666666666666668% * 3 + 3px);
+					width: 0;
+					height: 16vw;
+					overflow: hidden;
+					> div {
+						width: 16vw;
+						height: 100%;
+					}
+				}
+				.content {
+					transition: width .6s .1s ease;
+					position: absolute;
+					bottom: 20%;
+					left: calc(16.666666666666668% * 4 + 4px);
+					width: 0;
+					overflow: hidden;
+					padding: 0 0 0 2vw;
+					> div {
+						width: 22vw;
+						height: 100%;
+						.name {
+							margin: 0 0 1vw 0;
+								font-weight: 300;
+								font-size: 1.3vw;
+								text-transform: uppercase;
+								line-height: 130%;
+						}
+						.office {
+							margin: 1vw 0;
+								font-weight: 500;
+						}
+						.text {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// controls
+	.controls {
+		position: absolute;
+		bottom: 30%;
+		left: calc(16.666666666666668% * 2 + 4px);
+		width: calc(16.666666666666668% - 9px);
+		height: 5vw;
+			font-size: 0;
+		> div {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			> div {
+				width: 100%;
+				height: 5vw;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				> div {
+					position: relative;
+					width: 5vw;
+					height: 5vw;
+					background: #ebebeb;
+					display: inline-block;
+					vertical-align: bottom;
+					cursor: pointer;
+						font-size: 16px;
+					&:after {
+						content: '';
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						width: 20px;
+						height: 20px;
+						border: 1px solid;
+					}
+					&.prev {
+						margin: 0 8px 0 0;
+						&:after {
+							transform: rotate(45deg);
+							border-color: transparent transparent #5498d5 #5498d5;
+							margin: -10px 0 0 -3px;
+						}
+					}
+					&.next {
+						&:after {
+							transform: rotate(45deg);
+							border-color: #5498d5 #5498d5 transparent transparent;
+							margin: -9px 0 0 -16px;
+						}
+					}
+				}
 			}
 		}
 	}

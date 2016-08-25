@@ -23,14 +23,15 @@
 		margin: 7vw auto 1vw;
 		padding: 0 16.666666666666668% 0 0;
 		.item {
+			position: relative;
 			background: $color-2;
-			margin: 0 4px 8px;
+			margin: 0 5px 8px 5px;
 			padding: 3vw 2vw;
 			&[type="standard"] {
-				width: calc(25% - 8px);
+				width: calc(25% - 10px);
 			}
 			&[type="landscape"] {
-				width: calc(50% - 8px);
+				width: calc(50% - 9px);
 			}
 
 			.date {
@@ -39,9 +40,16 @@
 			}
 			.title {
 				margin: 2vw 0 4vw;
-					font-size: 20px;
-					line-height: 120%;
-					font-weight: 600;
+					font-size: 16px;
+					line-height: 160%;
+					font-weight: 500;
+			}
+			.more {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -53,20 +61,23 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: calc(100vh - 2vw);
+		height: 100%;
+		overflow: hidden;
 		.image {
 			position: absolute;
-			&.image-1 {
+			&.image-1 { display: none;
 				top: 30%;
 				left: calc(16.666666666666668% * 5 + 4px);
 				width: calc(16.666666666666668% * 1 - 8px);
 				height: 30%;
 			}
 			&.image-2 {
-				top: 115%;
+				top: 20%;
 				left: calc(16.666666666666668% * 5 + 4px);
 				width: calc(16.666666666666668% - 10px);
-				height: 80%;
+				height: 60%;
+				-webkit-filter: grayscale(100%);
+				opacity: 0.1;
 			}
 		}
 	}

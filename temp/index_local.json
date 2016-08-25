@@ -201,5 +201,79 @@
 				}
 			]
 		}
-	]
+	],
+
+	"reviews": {
+		"item": [
+			{
+				"class": "",
+				"photo": "pictures/reviews/img1.jpg",
+				"name": "Roman Vytak",
+				"office": "front end developer",
+				"text": "Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus. Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus."
+			},
+			{
+				"class": "",
+				"photo": "pictures/reviews/img1.jpg",
+				"name": "Roman Vytak",
+				"office": "front end developer",
+				"text": "Cupiditate possimus excepturi quam harum, numquam maiores dicta in? Fugit voluptates iste, similique ut commodi animi soluta! Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus."
+			},
+			{
+				"class": "active",
+				"photo": "pictures/reviews/img1.jpg",
+				"name": "Roman Vytak",
+				"office": "front end developer",
+				"text": "Ex sapiente, asperiores iure totam neque perspiciatis minus numquam repudiandae facere. Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus."
+			},
+			{
+				"class": "",
+				"photo": "pictures/reviews/img1.jpg",
+				"name": "Roman Vytak",
+				"office": "front end developer",
+				"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, enim. Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus. Aboriosam minima non voluptatibus amet dolor. Possimus asperiores et optio, voluptatum minus voluptatibus."
+			}
+		]
+	},
+
+	"home-project": {
+		"item": [
+			{
+				"class": "active",
+				"image": "pictures/img9.jpg",
+				"title": "Lorem ipsum dolor sit amet",
+				"description-1": "мінеральна вата",
+				"description-2": "39 000",
+				"description-3": "2016",
+				"text": ""
+			},
+			{
+				"class": "",
+				"image": "pictures/img12.jpg",
+				"title": "Lorem ipsum dolor sit amet",
+				"description-1": "мінеральна вата",
+				"description-2": "39 000",
+				"description-3": "2016",
+				"text": ""
+			},
+			{
+				"class": "",
+				"image": "pictures/img13.jpg",
+				"title": "Lorem ipsum dolor sit amet",
+				"description-1": "мінеральна вата",
+				"description-2": "39 000",
+				"description-3": "2016",
+				"text": ""
+			},
+			{
+				"class": "",
+				"image": "pictures/img14.jpg",
+				"title": "Lorem ipsum dolor sit amet",
+				"description-1": "мінеральна вата",
+				"description-2": "39 000",
+				"description-3": "2016",
+				"text": ""
+			}
+		]
+	}
 }

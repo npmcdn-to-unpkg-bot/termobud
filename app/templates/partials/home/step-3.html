@@ -3,31 +3,23 @@
 
 		<!-- text -->
 		<div class="title-step">
-			<h2>
-				<span class="span-wrap">
-					<span class="span-item span-item-1">Сучасне</span>
-					<span class="span-item span-item-2">Професійний</span>
-					<span class="span-item span-item-3">Реалізовані</span>
-				</span>
-				<span class="span-wrap">
-					<span class="span-item span-item-1">виробництво</span>
-					<span class="span-item span-item-2">монтаж</span>
-					<span class="span-item span-item-3">Проекти</span>
-				</span>
-			</h2>
-			<p class="text">
-				<span class="span-wrap">
-					<span class="span-item span-item-1">Італійське обладнання останнього, п'ятого покоління робить процес виготовлення повністю автоматизованим</span>
-					<span class="span-item span-item-2">15 монтажних команд, які вже 14 років монтують будь яку сендвіч панель</span>
-				</span>
-			</p>
-			<!-- <a href="#" class="button">Про компанію</a> -->
+			<div class="title-1">
+				<h2>Сучасне<br>виробництво</h2>
+				<p>Італійське обладнання останнього, п'ятого покоління робить процес виготовлення повністю автоматизованим</p>
+			</div>
+			<div class="title-2">
+				<h2>Професійний<br>монтаж</h2>
+				<p>15 монтажних команд, які вже 14 років монтують будь яку сендвіч панель</p>
+			</div>
+			<div class="title-3">
+				<h2>Реалізовані<br>проекти</h2>
+			</div>
 		</div>
 
 		<!-- photo -->
 		<div class="item-wrapper">
-			<div class="item item-1"></div>
-			<div class="item item-2"></div>
+			<div class="item item-1" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-2" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
 		</div>
 
 		<!-- video -->
@@ -57,79 +49,28 @@
 
 		<!-- slider -->
 		<div class="slider-wrapper">
+			<div class="items">
+				{{#home-project.item}}
+				<div class="item {{{class}}}">
+					<div class="img img-1" style="background:url('{{{image}}}') no-repeat center/cover fixed"></div>
+					<div class="img img-2" style="background:url('{{{image}}}') no-repeat center/cover fixed"></div>
+					<div class="description">
+						<div class="content-wrapper">
+							<h3>{{{title}}}</h3>
+							<p><span>Наповнювач: </span>{{{description-1}}}</p>
+							<p><span>Площа: </span>{{{description-2}}} кв. м.</p>
+							<p><span>Рік: </span>{{{description-3}}} р.</p>
+							<p class="text">{{{text}}}</p>
+						</div>
+					</div>
+				</div>
+				{{/home-project.item}}
+			</div>
 			<div class="controls">
 				<div>
 					<div>
-						<div class="prev"></div>
-						<div class="next"></div>
-					</div>
-				</div>
-			</div>
-			<div class="wrapper" project="project-1">
-				<div class="slider slider-1">
-					<div class="img img-1">
-						<span style="background: url('pictures/projects/img1.jpg')"></span>
-					</div>
-					<div class="img img-2">
-						<span style="background: url('pictures/projects/img2.jpg')"></span>
-					</div>
-				</div>
-				<div class="slider slider-2">
-					<div class="img img-1">
-						<span style="background: url('pictures/projects/img3.jpg')"></span>
-					</div>
-					<div class="img img-2">
-						<span style="background: url('pictures/projects/img4.jpg')"></span>
-					</div>
-				</div>
-				<div class="slider slider-3">
-					<div class="img img-1">
-						<span style="background: url('pictures/projects/img5.jpg')"></span>
-					</div>
-					<div class="img img-2">
-						<span style="background: url('pictures/projects/img6.jpg')"></span>
-					</div>
-				</div>
-				<div class="slider slider-4">
-					<div class="img img-1">
-						<span style="background: url('pictures/projects/img7.jpg')"></span>
-					</div>
-					<div class="img img-2">
-						<span style="background: url('pictures/projects/img8.jpg')"></span>
-					</div>
-				</div>
-			</div>
-			<div class="description">
-				<div class="text text-1">
-					<div>
-						<h3>Lorem ipsum dolor sit amet</h3>
-						<p><span>Наповнювач: </span>мінеральна вата</p>
-						<p><span>Площа: </span>39 000 кв. м.</p>
-						<p><span>Рік: </span>2016 р.</p>
-					</div>
-				</div>
-				<div class="text text-2">
-					<div>
-						<h3>Lorem ipsum dolor sit amet dolor end it</h3>
-						<p><span>Наповнювач: </span>мінеральна вата</p>
-						<p><span>Площа: </span>12 000 кв. м.</p>
-						<p><span>Рік: </span>2015 р.</p>
-					</div>
-				</div>
-				<div class="text text-3">
-					<div>
-						<h3>Lorem ipsum dolor</h3>
-						<p><span>Наповнювач: </span>мінеральна вата</p>
-						<p><span>Площа: </span>108 000 кв. м.</p>
-						<p><span>Рік: </span>2011 р.</p>
-					</div>
-				</div>
-				<div class="text text-4">
-					<div>
-						<h3>Lorem ipsum dolor sit</h3>
-						<p><span>Наповнювач: </span>мінеральна вата</p>
-						<p><span>Площа: </span>24 000 кв. м.</p>
-						<p><span>Рік: </span>2014 р.</p>
+						<div class="controll prev"></div>
+						<div class="controll next"></div>
 					</div>
 				</div>
 			</div>

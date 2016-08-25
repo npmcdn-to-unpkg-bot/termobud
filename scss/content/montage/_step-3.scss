@@ -61,7 +61,7 @@
 				height: 30%;
 				width: calc(16.666666666666668% * 1 - 8px);
 			}
-			&.item-3 {
+			&.item-3 { display: none;
 				bottom: 50%;
 				left: calc(16.666666666666668% * 3 + 3px);
 				height: 40%;
@@ -79,7 +79,7 @@
 				top: 0;
 				left: calc(16.666666666666668% * 5 + 4px);
 				height: 50%;
-				width: calc(16.666666666666668% - 8px);
+				width: calc(16.666666666666668% - 4px);
 			}
 		}
 	}

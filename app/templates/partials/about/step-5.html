@@ -10,19 +10,27 @@
 	<div class="reviews-wrapper">
 		<div class="items">
 			{{#reviews.item}}
-			<div class="item">
-				<div class="photo" style="background:url('{{{photo}}}') no-repeat center/cover fixed"></div>
+			<div class="item {{{class}}}">
+				<div class="photo">
+					<div style="background:url('{{{photo}}}') no-repeat center/cover"></div>
+				</div>
 				<div class="content">
-					<p class="name">{{{name}}}</p>
-					<p class="office">{{{office}}}</p>
-					<p class="text">{{{text}}}</p>
+					<div>
+						<p class="name">{{{name}}}</p>
+						<p class="office">{{{office}}}</p>
+						<p class="text">{{{text}}}</p>
+					</div>
 				</div>
 			</div>
 			{{/reviews.item}}
 		</div>
-		<div class="controll">
-			<div class="prew"></div>
-			<div class="next"></div>
+		<div class="controls">
+			<div>
+				<div>
+					<div class="controll prev"></div>
+					<div class="controll next"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
