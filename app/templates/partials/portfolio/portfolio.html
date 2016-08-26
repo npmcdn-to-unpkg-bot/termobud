@@ -1,24 +1,37 @@
-<div class="projects-wrapper">
-	<div class="wrapper">
-
-		{{#portfolio}}
-		<div class="project">
-			<div class="wrapper">
+<div class="project-wrapper">
+	<div class="projects">
+		<div>
+			{{#portfolio}}
+			<div class="project {{{class}}}" data-project="{{{title}}}">
 				<div class="title-step">
-					<h2>{{{title}}}</h2>
-					<p class="sub">{{{subtitle}}}</p>
-					<p><span>Наповнювач: </span>{{{text-1}}}</p>
-					<p><span>Площа: </span>{{{text-1}}}</p>
-					<p><span>Рік: </span>{{{text-1}}}</p>
+					<div class="wrapper">
+						<h2>{{{title}}}</h2>
+						<div class="text">
+							<p class="sub">{{{subtitle}}}</p>
+							<p><span>Наповнювач: </span>{{{text-1}}}</p>
+							<p><span>Площа: </span>{{{text-1}}}</p>
+							<p><span>Рік: </span>{{{text-1}}}</p>
+						</div>
+						<p class="text">{{{text}}}</p>
+					</div>
 				</div>
-				<div class="image-wrapper">
-					{{#images}}
-					<div class="image" style="background:url('{{{img}}}') no-repeat center/cover fixed"></div>
-					{{/images}}
+				<div class="item-wrapper">
+					<div class="item item-1" style="background:url('{{{img}}}') no-repeat center/cover fixed"></div>
+					<div class="item item-2" style="background:url('{{{img}}}') no-repeat center/cover fixed"></div>
+				</div>
+			</div>
+			{{/portfolio}}
+		</div>
+		<div class="controls">
+			<div>
+				<div>
+					<div class="controll prev"></div>
+					<div class="controll next"></div>
 				</div>
 			</div>
 		</div>
-		{{/portfolio}}
-
+	</div>
+	<div class="magellan">
+		<div class="wrapper"></div>
 	</div>
 </div>

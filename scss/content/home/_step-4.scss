@@ -6,6 +6,12 @@
 	height: 100vh;
 	min-height: 900px;
 
+	// title
+	.title-step {
+		position: relative;
+		z-index: 1;
+	}
+
 	// address
 	.address-wrapper {
 		position: absolute;
@@ -14,6 +20,7 @@
 		width: 100%;
 		height: 100%;
 		background: image-url('map.svg') no-repeat right 30%;
+		background-size: 57vw auto;
 		.address {
 			position: absolute;
 			height: 0;

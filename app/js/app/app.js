@@ -16,6 +16,9 @@
 		// my functions
 		openMenu();
 		sliderReviews();
+		sliderHome();
+		sliderPortfolio();
+
 		if(_body.hasClass('home-page')) {
 			scrollControll_home();
 			scrollControll_projects();
@@ -42,7 +45,7 @@
 
 		// my functions
 		magellan();
-		sliderHome();
+		activeMagellan();
 		
 		// home page
 		var videoHome1 = document.getElementById('video-home-1');
@@ -61,22 +64,6 @@
 		$('.menu-button').on('click', function() {
 			_body.toggleClass('open-menu');
 		})
-	}
-
-
-
-	// magellan
-	function magellan() {
-		var heightStep1 = $('.step-1').height(),
-			magellanBlock = $('.magellan');
-		$(window).scroll(function() {
-			var scrollTop = $(window).scrollTop();
-			if(scrollTop >= heightStep1) {
-				magellanBlock.addClass('show');
-			} else {
-				magellanBlock.removeClass('show');
-			}
-		});
 	}
 
 
@@ -204,15 +191,109 @@
 
 
 
+	// slider portfolio
+	function sliderPortfolio() {
+		var controll = $('.portfolio .project-wrapper .controls .controll'),
+			lengthElem = $('.portfolio .project-wrapper .projects .project').length,
+			reviewsWrapper = $('.portfolio .project-wrapper .projects');
+
+		controll.on('click', function() {
+
+			if(!reviewsWrapper.hasClass('waiting')) {
+				var activeElement = $('.portfolio .project-wrapper .projects .project.active'),
+					indexElem = $('.portfolio .project-wrapper .projects .project.active').index();
+
+				// waiting
+				reviewsWrapper.addClass('waiting');
+				setTimeout(function() {
+					reviewsWrapper.removeClass('waiting');
+				}, 600*2)
+
+				// prev
+				if($(this).hasClass('prev')) {
+					$('.portfolio .project-wrapper .projects .project').removeClass('active');
+					setTimeout(function() {
+						// check position
+						if(indexElem >= 1) { // якщо не перший елемент
+							activeElement.prev('.project').addClass('active');
+						} else { // якщо перший
+							$('.portfolio .project-wrapper .projects .project:last-child').addClass('active');
+						}
+						activeMagellan()
+					}, 600)
+				}
+				// next
+				else {
+					$('.portfolio .project-wrapper .projects .project').removeClass('active');
+					setTimeout(function() {
+						// ckeck position
+						if(indexElem < lengthElem-1) { // якщо не останній елемент
+							activeElement.next('.project').addClass('active');
+						} else { // якщо останній елемент
+							$('.portfolio .project-wrapper .projects .project:first-child').addClass('active');
+						}
+						activeMagellan()
+					}, 600)
+				}
+			}
+		})
+	}
+
+	// cleate magelan portfolio
+	function magellan() {
+
+		// create magellan
+		var projects = $('.portfolio .project-wrapper .projects .project'),
+			magellan = $('.portfolio .magellan .wrapper'),
+			reviewsWrapper = $('.portfolio .project-wrapper .projects');
+
+		projects.each(function() {
+			var name = $(this).find('.title-step h2').text(),
+				dataProject = $(this).attr('data-project');
+			magellan.append('<span data-project="' + dataProject + '">' + name + '</span>')
+		});
+
+		// after click
+		var button = $('.magellan .wrapper span');
+		button.on('click', function() {
+			var dataAttr = $(this).attr('data-project');
+
+			if(!reviewsWrapper.hasClass('waiting')) {
+				// waiting
+				reviewsWrapper.addClass('waiting');
+				setTimeout(function() {
+					reviewsWrapper.removeClass('waiting');
+				}, 600*2)
+
+				// add class
+				projects.removeClass('active');
+				setTimeout(function() {
+					$('.portfolio .project-wrapper .projects .project[data-project="' + dataAttr + '"]').addClass('active');
+					activeMagellan()
+				}, 600)
+			}
+		})
+	}
+
+	// active magellan
+	function activeMagellan() {
+		var projectPosition = $('.portfolio .project-wrapper .projects .project.active').attr('data-project');
+		$('.portfolio .magellan .wrapper span').removeClass('active');
+		$('.portfolio .magellan .wrapper span[data-project="' + projectPosition + '"]').addClass('active');
+	}
+
+
+
+	// 
 	function scrollControll_home() {
 		var controller = new ScrollMagic.Controller();
 
 		var scene = new ScrollMagic.Scene({
 			triggerElement: '.step-1'
 		})
-		.addIndicators({
-			name: 'home'
-		})
+		// .addIndicators({
+		// 	name: 'home'
+		// })
 		.addTo(controller)
 		scene.on('start', function (event) {
 			$('.step-1').addClass('active');
@@ -249,9 +330,9 @@
 			duration: 200
 		})
 		.setPin('.step-3')
-		.addIndicators({
-			name: 'first'
-		})
+		// .addIndicators({
+		// 	name: 'first'
+		// })
 		.addTo(controller)
 
 		scene.on('enter', function (event) {

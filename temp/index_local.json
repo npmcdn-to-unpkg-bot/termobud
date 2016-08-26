@@ -76,130 +76,74 @@
 
 	"portfolio": [
 		{
-			"title": "SOLVER",
+			"class": "active",
+			"title": "BMW",
 			"subtitle": "Lorem ipsum dolor sit amet",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img15.jpg"
-				},
-				{
-					"img": "pictures/img9.jpg"
-				},
-				{
-					"img": "pictures/img9.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "ROMATY NEREW",
+			"class": "",
+			"title": "Volkswagen",
 			"subtitle": "Lorem ipsum dolor sit amet",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img14.jpg"
-				},
-				{
-					"img": "pictures/img14.jpg"
-				},
-				{
-					"img": "pictures/img15.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "PROYAR LPT",
+			"class": "",
+			"title": "Volvo",
 			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img15.jpg"
-				},
-				{
-					"img": "pictures/img16.jpg"
-				},
-				{
-					"img": "pictures/img16.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "POLAROID",
+			"class": "",
+			"title": "Три Слони",
 			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img15.jpg"
-				},
-				{
-					"img": "pictures/img12.jpg"
-				},
-				{
-					"img": "pictures/img12.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "ROMATY NEREW",
+			"class": "",
+			"title": "Steco",
 			"subtitle": "Lorem ipsum dolor sit amet",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img1.jpg"
-				},
-				{
-					"img": "pictures/img14.jpg"
-				},
-				{
-					"img": "pictures/img14.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "PROYAR LPT",
+			"class": "",
+			"title": "ЛеоКераміка",
 			"subtitle": "Lorem ipsum dolor, consectetur adipisicing elit. Asperiores, accusamus!",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img15.jpg"
-				},
-				{
-					"img": "pictures/img16.jpg"
-				},
-				{
-					"img": "pictures/img16.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		},
 		{
-			"title": "SOLVER",
+			"class": "",
+			"title": "Оліяр",
 			"subtitle": "Lorem ipsum dolor sit amet",
 			"text-1": "мінеральна вата",
 			"text-2": "39 000 кв. м.",
 			"text-3": "2016 р.",
-			"images": [
-				{
-					"img": "pictures/img9.jpg"
-				},
-				{
-					"img": "pictures/img9.jpg"
-				},
-				{
-					"img": "pictures/img11.jpg"
-				}
-			]
+			"img": "pictures/img15.jpg",
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 		}
 	],
 
@@ -245,7 +189,7 @@
 				"description-1": "мінеральна вата",
 				"description-2": "39 000",
 				"description-3": "2016",
-				"text": ""
+				"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste eos, doloremque quas aspernatur eaque consectetur laudantium"
 			},
 			{
 				"class": "",

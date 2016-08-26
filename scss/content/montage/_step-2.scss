@@ -2,27 +2,27 @@
 
 	// title
 	.title-step {
-		margin-left: 17%;
+		margin-left: 15%;
 		padding: 11vw 1vw 0;
 		h2 {
 			margin: 0 0 3vw 0;
 			position: relative;
-				font-size: 3.5vw;
+				font-size: 3vw;
 				line-height: 85%;
 			.num {
-				font-size: 16vw;
-				letter-spacing: -3vw;
-				color: #d2d2d2;
 				position: absolute;
 				top: 0;
 				left: 0;
-				transform: translate(-65%, -63%);
+				transform: translate(-70%, -77%);
 				z-index: -1;
+					font-size: 18vw;
+					letter-spacing: -4vw;
+					color: #e2e2e2;
 			}
 		}
 		.text {
 			position: relative;
-			left: 3vw;
+			left: 6vw;
 			max-width: 15vw;
 				line-height: 160%;
 			p {

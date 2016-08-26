@@ -2,7 +2,7 @@
 
 	// title
 	.title-step {
-		margin-left: 17%;
+		//margin-left: 18%;
 		padding: 8vw 1vw 0;
 		h2 {
 			margin: 0 0 3vw 0;
@@ -10,24 +10,21 @@
 				font-size: 3.5vw;
 				line-height: 85%;
 			.num {
-				font-size: 16vw;
-				letter-spacing: -3vw;
-				color: #d2d2d2;
 				position: absolute;
 				top: 0;
 				left: 0;
 				transform: translate(-65%, -44%);
 				z-index: -1;
+					font-size: 16vw;
+					letter-spacing: -3vw;
+					color: #d2d2d2;
 			}
 		}
 		.text {
 			position: relative;
-			left: 3vw;
+			//left: 3vw;
 			max-width: 25vw;
 				line-height: 160%;
-			p {
-				margin: 0;
-			}
 			.sub-1 {
 				margin: 4vw 0 8px 0;
 			}
@@ -50,7 +47,7 @@
 			&.item-1 {
 				bottom: 0%;
 				left: 4px;
-				height: 45%;
+				height: 30%;
 				width: calc(16.666666666666668% * 1 - 9px);
 				-webkit-filter: grayscale(100%);
 				opacity: 0.1;

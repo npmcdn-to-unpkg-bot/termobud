@@ -1,8 +1,13 @@
 .step-5 {
 
+	// title
+	.title-step {
+		//margin-left: 16%;
+	}
 
 	// reviews
 	.reviews-wrapper {
+		pointer-events: none;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -42,6 +47,7 @@
 					}
 				}
 				.content {
+					pointer-events: all;
 					transition: width .6s .1s ease;
 					position: absolute;
 					bottom: 20%;
@@ -74,6 +80,7 @@
 
 	// controls
 	.controls {
+		pointer-events: all;
 		position: absolute;
 		bottom: 30%;
 		left: calc(16.666666666666668% * 2 + 4px);
