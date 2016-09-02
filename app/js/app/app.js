@@ -13,29 +13,41 @@
 			columnWidth: '.item'
 		});
 
+		var wow = new WOW(
+		{
+			boxClass:     'wow',
+			animateClass: 'animated',
+			offset:       -400,
+			mobile:       true,
+			live:         true,
+			scrollContainer: null
+		});
+		wow.init();
+
 		// my functions
+		routes();
 		openMenu();
 		sliderReviews();
 		sliderHome();
 		sliderPortfolio();
 
-		if(_body.hasClass('home-page')) {
-			scrollControll_home();
-			scrollControll_projects();
-			scrollControll_contacts();
-			checkPosition();
-		}
+		// if(_body.hasClass('home-page')) {
+		// 	scrollControll_home();
+		// 	scrollControll_projects();
+		// 	scrollControll_contacts();
+		// 	checkPosition();
+		// }
 
-		$.fn.disableScroll = function() {
-			window.oldScrollPos = $(window).scrollTop();
-			$(window).on('scroll.scrolldisabler',function ( event ) {
-				$(window).scrollTop( window.oldScrollPos );
-				event.preventDefault();
-			});
-		};
-		$.fn.enableScroll = function() {
-			$(window).off('scroll.scrolldisabler');
-		};
+		// $.fn.disableScroll = function() {
+		// 	window.oldScrollPos = $(window).scrollTop();
+		// 	$(window).on('scroll.scrolldisabler',function ( event ) {
+		// 		$(window).scrollTop( window.oldScrollPos );
+		// 		event.preventDefault();
+		// 	});
+		// };
+		// $.fn.enableScroll = function() {
+		// 	$(window).off('scroll.scrolldisabler');
+		// };
 	});
 
 	// show site -------------------------------------------------------------------------------------- //
@@ -51,11 +63,90 @@
 		var videoHome1 = document.getElementById('video-home-1');
 		var videoHome2 = document.getElementById('video-home-2');
 		var videoHome3 = document.getElementById('video-home-3');
-		videoHome1.play();
-		videoHome2.play();
-		videoHome3.play();
+		// videoHome1.play();
+		// videoHome2.play();
+		// videoHome3.play();
 
 	});
+
+
+
+
+	// routes
+	function routes() {
+
+		var scroll = null,
+			page = $('.slider-wrapper'),
+			duration = 1000;
+
+		scroll = Hamster(window).wheel(handler, false);
+		function handler(event, delta, deltaX, deltaY) {
+
+			// check if 1
+			if(page.attr('page') == 'page-1') {
+				// go
+				if (deltaY === -1) {
+					setTimeout(function() {
+						page.attr('page', 'page-2');
+					}, duration);
+				}
+				clrarPosition();
+			}
+
+			// check if 2
+			if(page.attr('page') == 'page-2') {
+				// go
+				if (deltaY === -1) {
+					setTimeout(function() {
+						page.attr('page', 'page-3');
+					}, duration);
+				}
+				// back
+				if (deltaY === 1) {
+					setTimeout(function() {
+						page.attr('page', 'page-1');
+					}, duration);
+				}
+				clrarPosition();
+			}
+
+			// check if 3
+			if(page.attr('page') == 'page-3') {
+				// go
+				if (deltaY === -1) {
+					setTimeout(function() {
+						page.attr('page', 'page-4');
+					}, duration);
+					
+				}
+				// back
+				if (deltaY === 1) {
+					setTimeout(function() {
+						page.attr('page', 'page-2');
+					}, duration);
+				}
+				clrarPosition();
+			}
+
+			// check if 4
+			if(page.attr('page') == 'page-4') {
+				// back
+				if (deltaY === 1) {
+					setTimeout(function() {
+						page.attr('page', 'page-3');
+					}, duration);
+				}
+				clrarPosition();
+			}
+			
+
+			// add function
+			function clrarPosition() {
+				//if(page.attr('page') == 'page-1' || page.attr('page') == 'page-4')
+				page.attr('page', '');
+			}
+		}
+	}
 
 
 
@@ -275,144 +366,233 @@
 		})
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// active magellan
-	function activeMagellan() {
-		var projectPosition = $('.portfolio .project-wrapper .projects .project.active').attr('data-project');
-		$('.portfolio .magellan .wrapper span').removeClass('active');
-		$('.portfolio .magellan .wrapper span[data-project="' + projectPosition + '"]').addClass('active');
-	}
+	// function activeMagellan() {
+	// 	var projectPosition = $('.portfolio .project-wrapper .projects .project.active').attr('data-project');
+	// 	$('.portfolio .magellan .wrapper span').removeClass('active');
+	// 	$('.portfolio .magellan .wrapper span[data-project="' + projectPosition + '"]').addClass('active');
+	// }
 
 
 
 	// 
-	function scrollControll_home() {
-		var controller = new ScrollMagic.Controller();
+	// var popo = null;
+	// function scrollControll_home() {
+	// 	var position = $('.step-1');
+	// 	var controller = new ScrollMagic.Controller();
 
-		var scene = new ScrollMagic.Scene({
-			triggerElement: '.step-1'
-		})
-		// .addIndicators({
-		// 	name: 'home'
-		// })
-		.addTo(controller)
-		scene.on('start', function (event) {
-			$('.step-1').addClass('active');
-		});
-	}
+	// 	var scene = new ScrollMagic.Scene({
+	// 		triggerElement: '.step-1'
+	// 	})
+	// 	.addIndicators({
+	// 		name: 'home'
+	// 	})
+	// 	.addTo(controller)
+	// 	scene.on('enter', function (event) {
+	// 		$(window).disableScroll();
+	// 		function handler(event, delta, deltaX, deltaY) {
+	// 			if (deltaY === -1) {
+	// 				position.attr('position', 'position-2');
+	// 				// 
+	// 				setTimeout(function() {
+	// 					popo.unwheel();
+	// 					$(window).enableScroll();
+	// 				}, 1000)
+	// 			}
+	// 		}
+	// 		popo = Hamster(window).wheel(handler, false);
+	// 	})
+	// }
 
 
 
 	// scroll controll (projects)
-	var position = $('.step-3'),
-		stopPosition = $('.step-3').offset().top,
-		lastScrollTop = 0,
-		duration = 600 + 100;
-	var wheel = null;
-	function checkPosition() {
-		if($(window).scrollTop() <= stopPosition-10) {
-			position.attr('position', 'position-1');
-		} else {
-			position.attr('position', 'position-3');
-			position.attr('step', 'content-3');
-		}
-	}
-	function scrollControll_projects() {
-		var step3 = $('.step-3');
+	// var position = $('.step-3'),
+	// 	stopPosition = $('.step-3').offset().top,
+	// 	lastScrollTop = 0,
+	// 	duration = 600 + 100;
+	// var wheel = null;
+	// function checkPosition() {
+	// 	if($(window).scrollTop() <= stopPosition-10) {
+	// 		position.attr('position', 'position-1');
+	// 	} else {
+	// 		position.attr('position', 'position-3');
+	// 		position.attr('step', 'content-3');
+	// 	}
+	// }
+	// function scrollControll_projects() {
+	// 	var step3 = $('.step-3');
 
-		var controller = new ScrollMagic.Controller({
-			globalSceneOptions: {
-				triggerHook: 'onLeave'
-			}
-		});
+	// 	var controller = new ScrollMagic.Controller({
+	// 		globalSceneOptions: {
+	// 			triggerHook: 'onLeave'
+	// 		}
+	// 	});
 
-		var scene = new ScrollMagic.Scene({
-			triggerElement: '.step-3',
-			duration: 200
-		})
-		.setPin('.step-3')
-		// .addIndicators({
-		// 	name: 'first'
-		// })
-		.addTo(controller)
+	// 	var scene = new ScrollMagic.Scene({
+	// 		triggerElement: '.step-3',
+	// 		duration: 200
+	// 	})
+	// 	.setPin('.step-3')
+	// 	// .addIndicators({
+	// 	// 	name: 'first'
+	// 	// })
+	// 	.addTo(controller)
 
-		scene.on('enter', function (event) {
-			$(window).disableScroll();
-			function handler(event, delta, deltaX, deltaY) {
-				if (deltaY === -1) {
-					if (position.attr('position') == 'position-1') {
-						// change position
-						position.attr('position', '');
-						setTimeout(function() {
-							position.attr('position', 'position-2');
-						}, duration);
-						// change content
-						position.attr('step', 'content-2');
-					}
-					if (position.attr('position') == 'position-2') {
-						// change position
-						position.attr('position', '');
-						setTimeout(function() {
-							position.attr('position', 'position-3');
-						}, duration);
-						// change content
-						position.attr('step', 'content-3');
-					}
-					if (position.attr('position') == 'position-3') {
-						wheel.unwheel();
-						$(window).enableScroll();
-					}
-				}
-				if(deltaY === 1) {
-					if (position.attr('position') == 'position-3') {
-						// change position
-						position.attr('position', '');
-						setTimeout(function() {
-							position.attr('position', 'position-2');
-						}, duration);
-						// change content
-						position.attr('step', 'content-2');
-					}
-					if (position.attr('position') == 'position-2') {
-						// change position
-						position.attr('position', '');
-						setTimeout(function() {
-							position.attr('position', 'position-1');
-						}, duration);
-						// change content
-						position.attr('step', '');
-					}
-					if (position.attr('position') == 'position-1') {
-						wheel.unwheel();
-						$(window).enableScroll();
-					}
-				}
-				event.preventDefault();
-			}
-			wheel = Hamster(window).wheel(handler, false);
-		});
-		scene.on('leave', function(event) {
-			console.log("Scene leaved.");
-			$(window).enableScroll();
-			wheel.unwheel();
-		});
-	}
+	// 	scene.on('enter', function (event) {
+	// 		$(window).disableScroll();
+	// 		function handler(event, delta, deltaX, deltaY) {
+	// 			if (deltaY === -1) {
+	// 				if (position.attr('position') == 'position-1') {
+	// 					// change position
+	// 					position.attr('position', '');
+	// 					setTimeout(function() {
+	// 						position.attr('position', 'position-2');
+	// 					}, duration);
+	// 					// change content
+	// 					position.attr('step', 'content-2');
+	// 				}
+	// 				if (position.attr('position') == 'position-2') {
+	// 					// change position
+	// 					position.attr('position', '');
+	// 					setTimeout(function() {
+	// 						position.attr('position', 'position-3');
+	// 					}, duration);
+	// 					// change content
+	// 					position.attr('step', 'content-3');
+	// 				}
+	// 				if (position.attr('position') == 'position-3') {
+	// 					wheel.unwheel();
+	// 					$(window).enableScroll();
+	// 				}
+	// 			}
+	// 			if(deltaY === 1) {
+	// 				if (position.attr('position') == 'position-3') {
+	// 					// change position
+	// 					position.attr('position', '');
+	// 					setTimeout(function() {
+	// 						position.attr('position', 'position-2');
+	// 					}, duration);
+	// 					// change content
+	// 					position.attr('step', 'content-2');
+	// 				}
+	// 				if (position.attr('position') == 'position-2') {
+	// 					// change position
+	// 					position.attr('position', '');
+	// 					setTimeout(function() {
+	// 						position.attr('position', 'position-1');
+	// 					}, duration);
+	// 					// change content
+	// 					position.attr('step', '');
+	// 				}
+	// 				if (position.attr('position') == 'position-1') {
+	// 					wheel.unwheel();
+	// 					$(window).enableScroll();
+	// 				}
+	// 			}
+	// 			event.preventDefault();
+	// 		}
+	// 		wheel = Hamster(window).wheel(handler, false);
+	// 	});
+	// 	scene.on('leave', function(event) {
+	// 		//console.log("Scene leaved.");
+	// 		$(window).enableScroll();
+	// 		wheel.unwheel();
+	// 	});
+	// }
 
 
 
-	function scrollControll_contacts() {
-		var controller = new ScrollMagic.Controller();
+	// function scrollControll_contacts() {
+	// 	var controller = new ScrollMagic.Controller();
 
-		var scene = new ScrollMagic.Scene({
-			triggerElement: '.step-4'
-		})
-		// .addIndicators({
-		// 	name: 'contacts'
-		// })
-		.addTo(controller)
-		scene.on('start', function (event) {
-			$('.step-4').addClass('active');
-		});
-	}
+	// 	var scene = new ScrollMagic.Scene({
+	// 		triggerElement: '.step-4'
+	// 	})
+	// 	// .addIndicators({
+	// 	// 	name: 'contacts'
+	// 	// })
+	// 	.addTo(controller)
+	// 	scene.on('start', function (event) {
+	// 		$('.step-4').addClass('active');
+	// 	});
+	// }
 
 
 
@@ -426,164 +606,3 @@
 })();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// function scrollControll() {
-
-	// 	var stopPosition = $('.step-3').offset().top,
-	// 		step3 = $('.step-3'),
-	// 		scrollTop = $(window).scrollTop(),
-	// 		lastScrollTop = 0,
-	// 		position = $('.step-3'),
-	// 		duration = 700 + 200;
-
-	// 	// показати відео (для анімації)
-	// 	$('.step-3 .video-wrapper').addClass('show-video');
-
-	// 	// запустити функцію при оновленні сторінки
-	// 	checkPosition();
-
-	// 	// при скролі
-	// 	$(window).scroll(function(event){
-	// 		var st = $(this).scrollTop();
-	// 		if (st > lastScrollTop){
-	// 			console.log('down');
-	// 			scrollTop = $(window).scrollTop();
-	// 			checkPosition();
-	// 		} else {
-	// 			console.log('up');
-	// 		}
-	// 		lastScrollTop = st;
-	// 	});
-
-	// 	// чек позиції
-	// 	function checkPosition() {
-	// 		if(scrollTop >= stopPosition-10) {
-	// 			// 
-	// 			position.attr('position', 'position-1');
-	// 			// блокувати скрол
-	// 			position.addClass('disable-scroll');
-	// 			// 
-	// 			changeContent();
-	// 		}
-	// 	}
-
-	// 	// 
-	// 	function changeContent() {
-	// 		var disableScroll = document.querySelector('.disable-scroll'),
-	// 			index = 0;
-
-	// 		function handler(event, delta, deltaX, deltaY) {
-	// 			//console.log(event);
-
-	// 			if (step3.hasClass('disable-scroll')) {
-	// 				event.preventDefault();
-
-	// 				// go down!
-	// 				if(delta == '-1') {
-	// 					if (position.attr('position') == 'position-1') {
-	// 						// change position
-	// 						position.attr('position', '');
-	// 						setTimeout(function() {
-	// 							position.attr('position', 'position-2');
-	// 						}, duration);
-	// 						// change content
-	// 						position.attr('step', 'content-2');
-	// 					}
-	// 					if (position.attr('position') == 'position-2') {
-	// 						// change position
-	// 						position.attr('position', '');
-	// 						setTimeout(function() {
-	// 							position.attr('position', 'position-3');
-	// 						}, duration);
-	// 						// change content
-	// 						position.attr('step', 'content-3');
-	// 					}
-	// 					if (position.attr('position') == 'position-3') {
-	// 						step3.removeClass('disable-scroll')
-	// 					}
-	// 				}
-
-	// 				// go up!
-	// 				if(delta == '1') {
-	// 					if (position.attr('position') == 'position-3') {
-	// 						// change position
-	// 						position.attr('position', '');
-	// 						setTimeout(function() {
-	// 							position.attr('position', 'position-2');
-	// 						}, duration);
-	// 						// change content
-	// 						position.attr('step', 'content-2');
-	// 					}
-	// 					if (position.attr('position') == 'position-2') {
-	// 						// change position
-	// 						position.attr('position', '');
-	// 						setTimeout(function() {
-	// 							position.attr('position', 'position-1');
-	// 						}, duration);
-	// 						// change content
-	// 						position.attr('step', '');
-	// 					}
-	// 					if (position.attr('position') == 'position-1') {
-	// 						step3.removeClass('disable-scroll')
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-	// 		Hamster(disableScroll).wheel(handler,false);
-	// 	}
-	// }

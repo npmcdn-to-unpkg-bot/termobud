@@ -1,22 +1,24 @@
 @charset "utf-8";
 
+// fonts
+@import 'general/fonts';
 
 // helpers and settings
 @import "general/helpers/mixins";
 @import "settings";
 
-
 // img
 $imgpath: "../img/";
 $pictpath: "../pictures/";
 
+//
+$duration: 1s;
 
 // main libraries
 @import "normalize";
 @import "foundation/components/global";
 @import "foundation/components/grid";
 @import "foundation/components/visibility";
-
 
 // general elements
 @import 'general/images';
@@ -26,7 +28,6 @@ $pictpath: "../pictures/";
 @import 'general/layout/body';
 @import 'general/layout/footer';
 @import 'general/menu';
-
 
 // pages
 @import 'content/home/commonstyles';

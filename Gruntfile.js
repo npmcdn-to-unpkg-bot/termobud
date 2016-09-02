@@ -76,9 +76,10 @@ module.exports = function (grunt) {
                         'bower_components/jquery/dist/jquery.min.js',
                         'bower_components/mustache/mustache.js',
                         'bower_components/masonry/dist/masonry.pkgd.min.js',
-                        'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-                        'bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+                        //'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+                        //'bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
                         'app/js/vendor/hamster.js',
+                        'app/js/vendor/wow.min.js',
                         'app/js/app/app.js'
                     ]
                 }

@@ -1,8 +1,7 @@
 .step-3 {
-	z-index: 1;
-	position: relative;
-	padding: 1vw;
-	min-height: 100vh;
+	opacity: 0;
+	pointer-events: none;
+
 	> div {
 		padding: 1px 0 0 0;
 		position: relative;

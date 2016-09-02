@@ -62,10 +62,12 @@
 			&.item-3 {
 				bottom: 0;
 				left: calc(16.666666666666668% * 3 + 3px);
-				height: 65%;
+				height: 0%;
 				width: calc(16.666666666666668% * 2 - 8px);
-				// -webkit-filter: grayscale(100%);
-				// opacity: 0.1;
+				transition: height $duration 0s cubic-bezier(0.52, 0.09, 0.12, 1);
+				&.animated {
+					height: 65%;
+				}
 			}
 			&.item-4 { display: none;
 				top: 0;

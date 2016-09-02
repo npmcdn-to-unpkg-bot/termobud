@@ -1,9 +1,92 @@
 .home-page {
 
-	
+	.slider-wrapper {
+		.step {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		// change position
+
+		// --------------------------------- page 1
+		&[page="page-1"] {
+
+			// step 1
+			.step-1 {
+				pointer-events: auto;
+				.img-wrapper {
+					.img {
+						&.img-1 {
+							height: 52%;
+						}
+						&.img-2 {
+							height: 100%;
+						}
+						&.img-3 {
+							height: 74%;
+						}
+						&.img-4 {
+							height: 65%;
+						}
+					}
+				}
+				.text {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+		}
+
+		// --------------------------------- page 2
+		&[page="page-2"] {
+
+			// step 2
+			.step-2 {
+				pointer-events: auto;
+				.title-step {
+					opacity: 1;
+					transform: translateY(0);
+				}
+				.buttons-wrapper {
+					.home-button {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+				.visualization {
+					height: 100%;
+				}
+				.container {
+					height: 100%;
+				}
+			}
+		}
+
+		// --------------------------------- page 3
+		&[page="page-3"] {
+
+			// step 3
+			.step-3 {
+				pointer-events: auto;
+			}
+		}
+
+		// --------------------------------- page 4
+		&[page="page-4"] {
+
+			// step 4
+			.step-4 {
+				pointer-events: auto;
+			}
+		}
+	}
 
 	@import 'step-1';
 	@import 'step-2';
 	@import 'step-3';
 	@import 'step-4';
+
 }
