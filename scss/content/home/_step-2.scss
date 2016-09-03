@@ -9,10 +9,12 @@
 
 	// title
 	.title-step {
-		transition: opacity $duration .2s, transform $duration .2s ease;
 		opacity: 0;
 		transform: translateY(20px);
 		margin-left: 10%;
+		transition-property: opacity, transform;
+		transition-timing-function: $timing-ease;
+		transition-duration: $duration;
 		h2, .sub {
 			margin: 0;
 		}
@@ -33,15 +35,9 @@
 		.home-button {
 			opacity: 0;
 			transform: translateY(20px);
-			&:nth-child(1) {
-				transition: opacity $duration .4s, transform $duration .4s ease;
-			}
-			&:nth-child(2) {
-				transition: opacity $duration .6s, transform $duration .6s ease;
-			}
-			&:nth-child(3) {
-				transition: opacity $duration .8s, transform $duration .8s ease;
-			}
+			transition-property: opacity, transform;
+			transition-timing-function: $timing-ease;
+			transition-duration: $duration;
 			&:not(:last-child) {
 				margin: 3vw 0;
 			}
@@ -53,7 +49,7 @@
 					line-height: 120%;
 				> span {
 					cursor: pointer;
-					&:hover {
+					&:hover, &.active {
 						color: #0082ca;
 					}
 				}
@@ -68,14 +64,15 @@
 
 	// visualization
 	.visualization {
-		transition: height $duration 1s ease;
-		z-index: -1;
 		position: absolute;
 		bottom: 0;
 		left: calc(16.666666666666668% * 2 + 4px);
 		width: calc(16.666666666666668% * 2 - 9px);
 		height: 0;
 		overflow: hidden;
+		transition-property: height;
+		transition-timing-function: $timing-ease;
+		transition-duration: $duration;
 		.viz-wrapper {
 			position: absolute;
 			bottom: 0;
@@ -112,22 +109,35 @@
 
 	// container
 	.container {
-		transition: height $duration 0s ease;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		width: calc(16.666666666666668% * 2 - 4px);
 		height: 0;
 		overflow: hidden;
+		transition-property: height;
+		transition-timing-function: $timing-ease;
+		transition-duration: $duration;
 		.wrapper {
 			position: absolute;
 			bottom: 0;
-			left: 0;
-			width: 100%;
 			height: calc(100vh - 2vw);
-			padding: 0 0 0 7vw;
 			background: #ebebeb;
-			width: 100%;
+			overflow: hidden;
+		}
+		.wrapper-short {
+			left: 0;
+			transition: width 1s 0s ease;
+			z-index: 1;
+			width: calc(32vw + 8px);
+			> div {
+				padding: 0 0 0 7vw;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: calc(32vw + 8px);
+			}
 
 			// title
 			h3 {
@@ -183,6 +193,21 @@
 						line-height: 120%;
 						color: #8a8a8a;
 				}
+			}
+		}
+		.wrapper-details {
+			transition: width 1.5s .8s ease;
+			right: 0;
+			width: 0;
+		}
+
+		&.open-details {
+			overflow: visible;
+			.wrapper-short {
+				width: 0;
+			}
+			.wrapper-details {
+				width: calc(64vw + 22px);
 			}
 		}
 	}

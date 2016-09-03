@@ -12,27 +12,35 @@
 			background: red;
 			background: picture-url('img1.jpg') no-repeat center/cover fixed;
 			&.img-1 {
-				transition: height 1s 0s cubic-bezier(0.52, 0.09, 0.12, 1);
-				bottom: 0;
+				transition-property: height;
+				transition-timing-function: $timing-bezier;
+				transition-duration: $duration;
+				top: 48%;
 				height: 0%;
 				width: calc(16.666666666666668% * 2 - 5px);
 			}
 			&.img-2 {
-				transition: height 1s .2s cubic-bezier(0.52, 0.09, 0.12, 1);
-				bottom: 0;
+				transition-property: height;
+				transition-timing-function: $timing-bezier;
+				transition-duration: $duration;
+				top: 0;
 				left: calc(16.666666666666668% * 2 + 4px);
 				height: 0%;
 				width: calc(16.666666666666668% - 4px - 5px);
 			}
 			&.img-3 {
-				transition: height 1s .1s cubic-bezier(0.52, 0.09, 0.12, 1);
+				transition-property: height;
+				transition-timing-function: $timing-bezier;
+				transition-duration: $duration;
 				top: 0;
 				left: calc(16.666666666666668% *3 + 3px);
 				height: 0%;
 				width: calc(16.666666666666668% - 4px - 4px);
 			}
 			&.img-4 {
-				transition: height 1s .3s cubic-bezier(0.52, 0.09, 0.12, 1);
+				transition-property: height;
+				transition-timing-function: $timing-bezier;
+				transition-duration: $duration;
 				top: 35%;
 				left: calc(16.666666666666668% *4 + 4px);
 				height: 0%;
@@ -43,7 +51,9 @@
 
 	// text
 	.text {
-		transition: opacity $duration 0s, transform $duration 0s ease;
+		transition-property: opacity, transform;
+		transition-timing-function: $timing-ease;
+		transition-duration: $duration;
 		opacity: 0;
 		transform: translateY(-20px);
 		position: absolute;

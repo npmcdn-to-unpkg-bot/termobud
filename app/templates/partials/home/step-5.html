@@ -1,0 +1,54 @@
+<div class="step step-5">
+	<div>
+
+		<!-- text -->
+		<div class="title-step">
+			<div class="title title-3">
+				<div>
+					<p class="sub">Реалізовані</p>
+					<h2>проекти</h2>
+					<div class="text">
+						<p>Ви можете переглянути всі проекти детально на сторінці проектів</p>
+						<a href="#" class="button">Переглянути проекти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- slider -->
+		<div class="slider-wrapper">
+			<div class="items">
+				{{#home-project.item}}
+				<div class="item {{{class}}}">
+					<div class="img img-1" style="background:url('{{{image}}}') no-repeat center/cover fixed"></div>
+					<div class="img img-2" style="background:url('{{{image}}}') no-repeat center/cover fixed"></div>
+					<div class="description">
+						<div class="description-wrapper">
+							<h3>{{{title}}}</h3>
+							<p><span>Наповнювач: </span>{{{description-1}}}</p>
+							<p><span>Площа: </span>{{{description-2}}} кв. м.</p>
+							<p><span>Рік: </span>{{{description-3}}} р.</p>
+							<p class="text">{{{text}}}</p>
+						</div>
+					</div>
+				</div>
+				{{/home-project.item}}
+			</div>
+			<div class="controls">
+				<div>
+					<div>
+						<div class="controll prev"></div>
+						<div class="controll next"></div>
+					</div>
+				</div>
+			</div>
+			<div class="pagination">
+				<div class="point point-1"></div>
+				<div class="point point-2"></div>
+				<div class="point point-3"></div>
+				<div class="point point-4"></div>
+			</div>
+		</div>
+
+	</div>
+</div>

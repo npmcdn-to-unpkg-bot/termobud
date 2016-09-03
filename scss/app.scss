@@ -13,6 +13,8 @@ $pictpath: "../pictures/";
 
 //
 $duration: 1s;
+$timing-bezier: cubic-bezier(0.52, 0.09, 0.12, 1);
+$timing-ease: ease;
 
 // main libraries
 @import "normalize";

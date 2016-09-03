@@ -30,6 +30,8 @@
 		sliderReviews();
 		sliderHome();
 		sliderPortfolio();
+		openDetails();
+		changeContent();
 
 		// if(_body.hasClass('home-page')) {
 		// 	scrollControll_home();
@@ -57,15 +59,15 @@
 
 		// my functions
 		magellan();
-		activeMagellan();
+		//activeMagellan();
 		
 		// home page
 		var videoHome1 = document.getElementById('video-home-1');
 		var videoHome2 = document.getElementById('video-home-2');
 		var videoHome3 = document.getElementById('video-home-3');
-		// videoHome1.play();
-		// videoHome2.play();
-		// videoHome3.play();
+		videoHome1.play();
+		videoHome2.play();
+		videoHome3.play();
 
 	});
 
@@ -77,73 +79,131 @@
 
 		var scroll = null,
 			page = $('.slider-wrapper'),
+			name = $('.slider-wrapper'),
 			duration = 1000;
 
 		scroll = Hamster(window).wheel(handler, false);
 		function handler(event, delta, deltaX, deltaY) {
 
 			// check if 1
-			if(page.attr('page') == 'page-1') {
+			if(name.attr('name') == 'page-1') {
 				// go
 				if (deltaY === -1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-2');
 					setTimeout(function() {
-						page.attr('page', 'page-2');
+						name.attr('name', 'page-2');
 					}, duration);
+					clrarPosition();
 				}
-				clrarPosition();
 			}
 
 			// check if 2
-			if(page.attr('page') == 'page-2') {
+			if(name.attr('name') == 'page-2') {
 				// go
 				if (deltaY === -1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-3');
 					setTimeout(function() {
-						page.attr('page', 'page-3');
+						name.attr('name', 'page-3');
 					}, duration);
+					clrarPosition();
 				}
 				// back
 				if (deltaY === 1) {
+					name.attr('direction', 'preview');
+					page.attr('page', 'page-1');
 					setTimeout(function() {
-						page.attr('page', 'page-1');
+						name.attr('name', 'page-1');
 					}, duration);
+					clrarPosition();
 				}
-				clrarPosition();
 			}
 
 			// check if 3
-			if(page.attr('page') == 'page-3') {
+			if(name.attr('name') == 'page-3') {
 				// go
 				if (deltaY === -1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-4');
 					setTimeout(function() {
-						page.attr('page', 'page-4');
+						name.attr('name', 'page-4');
 					}, duration);
-					
+					clrarPosition();
 				}
 				// back
 				if (deltaY === 1) {
+					name.attr('direction', 'preview');
+					page.attr('page', 'page-2');
 					setTimeout(function() {
-						page.attr('page', 'page-2');
+						name.attr('name', 'page-2');
 					}, duration);
+					clrarPosition();
 				}
-				clrarPosition();
 			}
 
 			// check if 4
-			if(page.attr('page') == 'page-4') {
+			if(name.attr('name') == 'page-4') {
+				// go
+				if (deltaY === -1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-5');
+					setTimeout(function() {
+						name.attr('name', 'page-5');
+					}, duration);
+					clrarPosition();
+				}
 				// back
 				if (deltaY === 1) {
+					name.attr('direction', 'preview');
+					page.attr('page', 'page-3');
 					setTimeout(function() {
-						page.attr('page', 'page-3');
+						name.attr('name', 'page-3');
 					}, duration);
+					clrarPosition();
 				}
-				clrarPosition();
+			}
+
+			// check if 5
+			if(name.attr('name') == 'page-5') {
+				// go
+				if (deltaY === -1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-6');
+					setTimeout(function() {
+						name.attr('name', 'page-6');
+					}, duration);
+					clrarPosition();
+				}
+				// back
+				if (deltaY === 1) {
+					name.attr('direction', 'preview');
+					page.attr('page', 'page-4');
+					setTimeout(function() {
+						name.attr('name', 'page-4');
+					}, duration);
+					clrarPosition();
+				}
+			}
+
+			// check if 6
+			if(name.attr('name') == 'page-6') {
+				// back
+				if (deltaY === 1) {
+					name.attr('direction', 'next');
+					page.attr('page', 'page-5');
+					setTimeout(function() {
+						name.attr('name', 'page-5');
+					}, duration);
+					clrarPosition();
+				}
 			}
 			
 
 			// add function
 			function clrarPosition() {
 				//if(page.attr('page') == 'page-1' || page.attr('page') == 'page-4')
-				page.attr('page', '');
+				page.attr('name', '');
 			}
 		}
 	}
@@ -155,6 +215,37 @@
 		$('.menu-button').on('click', function() {
 			_body.toggleClass('open-menu');
 		})
+	}
+
+
+
+	// open details (step 2)
+	function openDetails() {
+		$('.step-2 .visualization .more').on('click', function() {
+			$('.step-2 .container').addClass('open-details');
+		})
+	}
+	function changeContent() {
+		var button = $('.step-2 .buttons-wrapper .home-button .load');
+		button.on('click', function() {
+
+			// active button
+			button.removeClass('active');
+			$(this).addClass('active');
+
+			// load new content
+			var link = $(this).attr('load-page'),
+				content = $('.step-2 .wrapper-details .content');
+			$.ajax({
+				url: link,
+				cache: false,
+				type: "POST",
+				success: function(response){
+					content.html(response);
+				}
+			});
+			return false;
+		});
 	}
 
 
@@ -282,6 +373,9 @@
 
 
 
+
+	// PORTFOLIO PAGE ---------------------------------------------------- //
+
 	// slider portfolio
 	function sliderPortfolio() {
 		var controll = $('.portfolio .project-wrapper .controls .controll'),
@@ -330,7 +424,7 @@
 		})
 	}
 
-	// cleate magelan portfolio
+	// create magelan portfolio
 	function magellan() {
 
 		// create magellan

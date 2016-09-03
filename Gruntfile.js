@@ -73,7 +73,7 @@ module.exports = function (grunt) {
                     'app/js/build/index.min.js':
                     [
                         // 'app/js/vendor/helpers.js',
-                        'bower_components/jquery/dist/jquery.min.js',
+                        //'bower_components/jquery/dist/jquery.min.js',
                         'bower_components/mustache/mustache.js',
                         'bower_components/masonry/dist/masonry.pkgd.min.js',
                         //'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',

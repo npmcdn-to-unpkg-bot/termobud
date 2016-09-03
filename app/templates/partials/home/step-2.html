@@ -11,18 +11,42 @@
 		<div class="buttons-wrapper">
 			<div class="home-button">
 				<span class="top"><span>Пінополістерол</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load active" load-page="pages/details/pinopolisterol-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/pinopolisterol-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 			<div class="home-button">
 				<span class="top"><span>Мінеральна вата</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load" load-page="pages/details/mineralvata-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/mineralvata-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 			<div class="home-button">
 				<span class="top"><span>Пінополіуретани</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load" load-page="pages/details/pinopoliuretan-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/pinopoliuretan-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 		</div>
 
@@ -39,36 +63,50 @@
 
 		<!-- container -->
 		<div class="container">
-			<div class="wrapper">
-				<h3>Переваги<span>сендвіч панелей</span></h3>
 
-				<div class="start-items">
-					<div class="item">
-						<div>
-							<h4>Терміни</h4>
-							<p>Короткі терміни зведення або ремонту будівель.</p>
+			<!-- short -->
+			<div class="wrapper wrapper-short">
+				<div>
+					<h3>Переваги<span>сендвіч панелей</span></h3>
+
+					<div class="start-items">
+						<div class="item">
+							<div>
+								<h4>Терміни</h4>
+								<p>Короткі терміни зведення або ремонту будівель.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Будівництво</h4>
-							<p>Будівництво може виконуватись в любу пору року, незалежно від температури. Високі показники теплоізоляції.</p>
+						<div class="item">
+							<div>
+								<h4>Будівництво</h4>
+								<p>Будівництво може виконуватись в любу пору року, незалежно від температури. Високі показники теплоізоляції.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Екологічність</h4>
-							<p>Екологічність, гігієнічність, безпека для людини. Відсутність зайвого навантаження на фундамент.</p>
+						<div class="item">
+							<div>
+								<h4>Екологічність</h4>
+								<p>Екологічність, гігієнічність, безпека для людини. Відсутність зайвого навантаження на фундамент.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Легкість</h4>
-							<p>Легкість транспортування.</p>
+						<div class="item">
+							<div>
+								<h4>Легкість</h4>
+								<p>Легкість транспортування.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- details -->
+			<div class="wrapper wrapper-details">
+				<div class="content">
+					<script>
+						$('.step-2 .wrapper-details .content').load('pages/details/pinopolisterol-stinovi.html', function() {});
+					</script>
+				</div>
+			</div>
+
 		</div>
 
 	</div>

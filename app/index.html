@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/app.css">
+	<script src="js/build/jquery.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -123,7 +124,7 @@
 			</span>
 		</li>
 	</ul>
-</div><div class="slider-wrapper" page="page-1">
+</div><div class="slider-wrapper" name="page-1" direction="next" page="page-1">
 <div class="step step-1">
 	<div class="img-wrapper">
 		<div class="img img-1"></div>
@@ -148,18 +149,42 @@
 		<div class="buttons-wrapper">
 			<div class="home-button">
 				<span class="top"><span>Пінополістерол</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load active" load-page="pages/details/pinopolisterol-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/pinopolisterol-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 			<div class="home-button">
 				<span class="top"><span>Мінеральна вата</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load" load-page="pages/details/mineralvata-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/mineralvata-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 			<div class="home-button">
 				<span class="top"><span>Пінополіуретани</span></span>
-				<span><span>Стінові</span></span>
-				<span><span>Покрівельні</span></span>
+				<span>
+					<span class="load" load-page="pages/details/pinopoliuretan-stinovi.html">
+						Стінові
+					</span>
+				</span>
+				<span>
+					<span class="load" load-page="pages/details/pinopoliuretan-pokrivelni.html">
+						Покрівельні
+					</span>
+				</span>
 			</div>
 		</div>
 
@@ -176,53 +201,79 @@
 
 		<!-- container -->
 		<div class="container">
-			<div class="wrapper">
-				<h3>Переваги<span>сендвіч панелей</span></h3>
 
-				<div class="start-items">
-					<div class="item">
-						<div>
-							<h4>Терміни</h4>
-							<p>Короткі терміни зведення або ремонту будівель.</p>
+			<!-- short -->
+			<div class="wrapper wrapper-short">
+				<div>
+					<h3>Переваги<span>сендвіч панелей</span></h3>
+
+					<div class="start-items">
+						<div class="item">
+							<div>
+								<h4>Терміни</h4>
+								<p>Короткі терміни зведення або ремонту будівель.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Будівництво</h4>
-							<p>Будівництво може виконуватись в любу пору року, незалежно від температури. Високі показники теплоізоляції.</p>
+						<div class="item">
+							<div>
+								<h4>Будівництво</h4>
+								<p>Будівництво може виконуватись в любу пору року, незалежно від температури. Високі показники теплоізоляції.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Екологічність</h4>
-							<p>Екологічність, гігієнічність, безпека для людини. Відсутність зайвого навантаження на фундамент.</p>
+						<div class="item">
+							<div>
+								<h4>Екологічність</h4>
+								<p>Екологічність, гігієнічність, безпека для людини. Відсутність зайвого навантаження на фундамент.</p>
+							</div>
 						</div>
-					</div>
-					<div class="item">
-						<div>
-							<h4>Легкість</h4>
-							<p>Легкість транспортування.</p>
+						<div class="item">
+							<div>
+								<h4>Легкість</h4>
+								<p>Легкість транспортування.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<!-- details -->
+			<div class="wrapper wrapper-details">
+				<div class="content">
+					<script>
+						$('.step-2 .wrapper-details .content').load('pages/details/pinopolisterol-stinovi.html', function() {});
+					</script>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
-</div><div class="step step-3" position="" step="">
+</div><div class="step step-3">
 	<div>
 
 		<!-- text -->
 		<div class="title-step">
-			<div class="title title-1">
-				<div>
-					<h2>Сучасне</h2>
-					<p class="sub">виробництво</p>
-					<div class="text">
-						<p>Італійське обладнання останнього, п'ятого покоління робить процес виготовлення повністю автоматизованим</p>
-					</div>
-				</div>
+			<h2>Сучасне</h2>
+			<p class="sub">виробництво</p>
+			<div class="text">
+				<p>Італійське обладнання останнього, п'ятого покоління робить процес виготовлення повністю автоматизованим</p>
 			</div>
+		</div>
+
+		<!-- photo -->
+		<div class="item-wrapper">
+			<div class="item item-1" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-2" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
+			<div class="item item-3" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
+		</div>
+
+	</div>
+</div>
+<div class="step step-4">
+	<div>
+
+		<!-- text -->
+		<div class="title-step">
 			<div class="title title-2">
 				<div>
 					<p class="sub">Професійний</p>
@@ -232,23 +283,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="title title-3">
-				<div>
-					<p class="sub">Реалізовані</p>
-					<h2>проекти</h2>
-					<div class="text">
-						<p>Ви можете переглянути всі проекти детально на сторінці проектів</p>
-						<a href="#" class="button">Переглянути проекти</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- photo -->
-		<div class="item-wrapper">
-			<div class="item item-1" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
-			<div class="item item-2" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
-			<div class="item item-3" style="background:url('pictures/img5.jpg') no-repeat center/cover fixed"></div>
 		</div>
 
 		<!-- video -->
@@ -276,6 +310,25 @@
 			</div>
 		</div>
 
+	</div>
+</div>
+<div class="step step-5">
+	<div>
+
+		<!-- text -->
+		<div class="title-step">
+			<div class="title title-3">
+				<div>
+					<p class="sub">Реалізовані</p>
+					<h2>проекти</h2>
+					<div class="text">
+						<p>Ви можете переглянути всі проекти детально на сторінці проектів</p>
+						<a href="#" class="button">Переглянути проекти</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- slider -->
 		<div class="slider-wrapper">
 			<div class="items">
@@ -283,7 +336,7 @@
 					<div class="img img-1" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
 					<div class="img img-2" style="background:url('pictures/img9.jpg') no-repeat center/cover fixed"></div>
 					<div class="description">
-						<div class="content-wrapper">
+						<div class="description-wrapper">
 							<h3>Lorem ipsum dolor sit amet</h3>
 							<p><span>Наповнювач: </span>мінеральна вата</p>
 							<p><span>Площа: </span>39 000 кв. м.</p>
@@ -296,7 +349,7 @@
 					<div class="img img-1" style="background:url('pictures/img12.jpg') no-repeat center/cover fixed"></div>
 					<div class="img img-2" style="background:url('pictures/img12.jpg') no-repeat center/cover fixed"></div>
 					<div class="description">
-						<div class="content-wrapper">
+						<div class="description-wrapper">
 							<h3>Lorem ipsum dolor sit amet</h3>
 							<p><span>Наповнювач: </span>мінеральна вата</p>
 							<p><span>Площа: </span>39 000 кв. м.</p>
@@ -309,7 +362,7 @@
 					<div class="img img-1" style="background:url('pictures/img13.jpg') no-repeat center/cover fixed"></div>
 					<div class="img img-2" style="background:url('pictures/img13.jpg') no-repeat center/cover fixed"></div>
 					<div class="description">
-						<div class="content-wrapper">
+						<div class="description-wrapper">
 							<h3>Lorem ipsum dolor sit amet</h3>
 							<p><span>Наповнювач: </span>мінеральна вата</p>
 							<p><span>Площа: </span>39 000 кв. м.</p>
@@ -322,7 +375,7 @@
 					<div class="img img-1" style="background:url('pictures/img14.jpg') no-repeat center/cover fixed"></div>
 					<div class="img img-2" style="background:url('pictures/img14.jpg') no-repeat center/cover fixed"></div>
 					<div class="description">
-						<div class="content-wrapper">
+						<div class="description-wrapper">
 							<h3>Lorem ipsum dolor sit amet</h3>
 							<p><span>Наповнювач: </span>мінеральна вата</p>
 							<p><span>Площа: </span>39 000 кв. м.</p>
@@ -350,7 +403,7 @@
 
 	</div>
 </div>
-<div class="step step-4">
+<div class="step step-6">
 	<div class="title-step">
 		<h2>Контакти</h2>
 		<div class="text">

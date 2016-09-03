@@ -9,84 +9,370 @@
 			height: 100%;
 		}
 
-		// change position
-
 		// --------------------------------- page 1
 		&[page="page-1"] {
 
-			// step 1
+			// швидкість отримання результату
+			&[direction="preview"] {
+				.step-2 {
+					.title-step { transition-delay: 0s; }
+					.buttons-wrapper .home-button {
+						&:nth-child(1) { transition-delay: 0s; }
+						&:nth-child(2) { transition-delay: 0s; }
+						&:nth-child(3) { transition-delay: 0s; }
+					}
+					.visualization { transition-delay: 0s; }
+					.container { transition-delay: 0s; }
+				}
+				.step-1 {
+					.img-wrapper .img {
+						&.img-1 { transition-delay: 1s; }
+						&.img-2 { transition-delay: 1s; }
+						&.img-3 { transition-delay: 1s; }
+						&.img-4 { transition-delay: 1s; }
+					}
+					.text { transition-delay: 1s; }
+				}
+			}
+
+			// який результат треба отримати
 			.step-1 {
 				pointer-events: auto;
-				.img-wrapper {
-					.img {
-						&.img-1 {
-							height: 52%;
-						}
-						&.img-2 {
-							height: 100%;
-						}
-						&.img-3 {
-							height: 74%;
-						}
-						&.img-4 {
-							height: 65%;
-						}
-					}
+				.img-wrapper .img {
+					&.img-1 { height: 52%; }
+					&.img-2 { height: 100%; }
+					&.img-3 { height: 74%; }
+					&.img-4 { height: 65%; }
 				}
-				.text {
-					opacity: 1;
-					transform: translateY(0px);
-				}
+				.text { opacity: 1; transform: translateY(0px); }
 			}
 		}
 
 		// --------------------------------- page 2
 		&[page="page-2"] {
 
-			// step 2
-			.step-2 {
-				pointer-events: auto;
-				.title-step {
-					opacity: 1;
-					transform: translateY(0);
+			// швидкість отримання результату
+			&[direction="next"] {
+				.step-1 {
+					.img-wrapper .img {
+						&.img-1 { transition-delay: 0s; }
+						&.img-2 { transition-delay: 0s; }
+						&.img-3 { transition-delay: 0s; }
+						&.img-4 { transition-delay: 0s; }
+					}
+					.text { transition-delay: 0s; }
 				}
-				.buttons-wrapper {
-					.home-button {
-						opacity: 1;
-						transform: translateY(0);
+				.step-2 {
+					.title-step { transition-delay: 1s; }
+					.buttons-wrapper .home-button {
+						&:nth-child(1) { transition-delay: 1s; }
+						&:nth-child(2) { transition-delay: 1s; }
+						&:nth-child(3) { transition-delay: 1s; }
+					}
+					.visualization { transition-delay: 1s; }
+					.container { transition-delay: 1s; }
+				}
+			}
+			&[direction="preview"] {
+				.step-3 {
+					.title-step { transition-delay: 0s; }
+					.item-wrapper .item {
+						&.item-1 { transition-delay: 0s; }
+						&.item-2 { transition-delay: 0s; }
+						&.item-3 { transition-delay: 0s; }
 					}
 				}
-				.visualization {
-					height: 100%;
+				.step-2 {
+					.title-step { transition-delay: 1s; }
+					.buttons-wrapper .home-button {
+						&:nth-child(1) { transition-delay: 1s; }
+						&:nth-child(2) { transition-delay: 1s; }
+						&:nth-child(3) { transition-delay: 1s; }
+					}
+					.visualization { transition-delay: 1s; }
+					.container { transition-delay: 1s; }
 				}
-				.container {
-					height: 100%;
-				}
+			}
+
+			// який результат треба отримати
+			.step-2 {
+				pointer-events: auto;
+				.title-step { opacity: 1; transform: translateY(0); }
+				.buttons-wrapper .home-button { opacity: 1; transform: translateY(0); }
+				.visualization { height: 100% }
+				.container { height: 100% }
 			}
 		}
 
 		// --------------------------------- page 3
 		&[page="page-3"] {
 
-			// step 3
+			// швидкість отримання результату
+			&[direction="next"] {
+				.step-2 {
+					.title-step { transition-delay: 0s; }
+					.buttons-wrapper .home-button {
+						&:nth-child(1) { transition-delay: 0s; }
+						&:nth-child(2) { transition-delay: 0s; }
+						&:nth-child(3) { transition-delay: 0s; }
+					}
+					.visualization { transition-delay: 0s; }
+					.container { transition-delay: 0s; }
+				}
+				.step-3 {
+					.title-step { transition-delay: 1s; }
+					.item-wrapper .item {
+						&.item-1 { transition-delay: 1s; }
+						&.item-2 { transition-delay: 1s; }
+						&.item-3 { transition-delay: 1s; }
+					}
+				}
+				.step-4 {
+					.video-wrapper .video {
+						&.video-3 { transition-delay: 1s; }
+					}
+				}
+			}
+			&[direction="preview"] {
+				.step-4 {
+					.title-step { transition-delay: 0s; }
+					.video-wrapper {
+						.video {
+							&.video-1 { transition-delay: 0s; }
+							&.video-2 { transition-delay: 0s; }
+							&.video-3 { transition-delay: 0s; }
+						}
+					}
+				}
+				.step-3 {
+					.title-step { transition-delay: 1s; }
+					.item-wrapper .item {
+						&.item-1 { transition-delay: 1s; }
+						&.item-2 { transition-delay: 1s; }
+						&.item-3 { transition-delay: 1s; }
+					}
+				}
+			}
+
+			// який результат треба отримати
+			.step-2 {
+				.title-step { opacity: 0; transform: translateY(-20px); }
+				.buttons-wrapper .home-button { opacity: 0; transform: translateY(-20px); }
+			}
 			.step-3 {
 				pointer-events: auto;
+				.title-step { opacity: 1; transform: translateY(0); }
+				.item-wrapper .item {
+					&.item-1 { height: 30%; }
+					&.item-2 { height: 30%; }
+					&.item-3 { height: 70%; }
+				}
+			}
+			.step-4 {
+				.video-wrapper .video {
+					&.video-3 { height: 70%; }
+				}
 			}
 		}
 
 		// --------------------------------- page 4
 		&[page="page-4"] {
 
-			// step 4
+			// швидкість отримання результату
+			&[direction="next"] {
+				.step-3 {
+					.title-step { transition-delay: 0s; }
+					.item-wrapper .item {
+						&.item-1 { transition-delay: 0s; }
+						&.item-2 { transition-delay: 0s; }
+						&.item-3 { transition-delay: 0s; }
+					}
+				}
+				.step-4 {
+					.title-step { transition-delay: 1s; }
+					.video-wrapper .video {
+						&.video-1 { transition-delay: 1s; }
+						&.video-2 { transition-delay: 1s; }
+						&.video-3 { transition-delay: 1s; }
+					}
+				}
+			}
+			&[direction="preview"] {
+				.step-5 {
+					.title-step { transition-delay: 0s; }
+					.slider-wrapper {
+						.items .item {
+							.img {
+								&.img-1 { transition-delay: 0s; }
+								&.img-2 { transition-delay: 0s; }
+							}
+							.description { transition-delay: 0s; }
+						}
+						.controls > div { transition-delay: 0s; }
+					}
+				}
+				.step-4 {
+					.title-step { transition-delay: 1s; }
+					.video-wrapper {
+						.video {
+							&.video-1 { transition-delay: 1s; }
+							&.video-2 { transition-delay: 1s; }
+							&.video-3 { transition-delay: 1s; }
+						}
+					}
+				}
+			}
+
+			// який результат треба отримати
+			.step-3 {
+				.title-step { opacity: 0; transform: translateY(-20px); }
+			}
 			.step-4 {
 				pointer-events: auto;
+				.title-step { opacity: 1; transform: translateY(0); }
+				.video-wrapper .video {
+					&.video-1 { height: 30%; }
+					&.video-2 { height: 70%; }
+					&.video-3 { height: 70%; }
+				}
 			}
 		}
+
+		// --------------------------------- page 5
+		&[page="page-5"] {
+
+			// швидкість отримання результату
+			&[direction="next"] {
+				.step-4 {
+					.title-step { transition-delay: 0s; }
+					.video-wrapper {
+						.video {
+							&.video-1 { transition-delay: 0s; }
+							&.video-2 { transition-delay: 0s; }
+							&.video-3 { transition-delay: 0s; }
+						}
+					}
+				}
+				.step-5 {
+					.title-step { transition-delay: 1s; }
+					.slider-wrapper {
+						.items .item {
+							.img {
+								&.img-1 { transition-delay: 1s; }
+								&.img-2 { transition-delay: 1s; }
+							}
+							.description { transition-delay: 1s; }
+						}
+						.controls > div { transition-delay: 1s; }
+					}
+				}
+			}
+
+			// який результат треба отримати
+			.step-4 {
+				.title-step { opacity: 0; transform: translateY(-20px); }
+			}
+			.step-5 {
+				pointer-events: auto;
+				.title-step { opacity: 1; transform: translateY(0); }
+				.slider-wrapper {
+					.items .item {
+						.img {
+							&.img-1 { height: 70%; }
+							&.img-2 { height: 70%; }
+						}
+						.description { height: 30%; }
+					}
+					.controls > div { height: 5vw; }
+				}
+			}
+		}
+
+		// --------------------------------- page 5
+		&[page="page-6"] {
+
+			// швидкість отримання результату
+			&[direction="next"] {
+				.step-5 {
+					.title-step { transition-delay: 0s; }
+					.slider-wrapper {
+						.items .item {
+							.img {
+								&.img-1 { transition-delay: 0s; }
+								&.img-2 { transition-delay: 0s; }
+							}
+							.description { transition-delay: 0s; }
+						}
+						.controls > div { transition-delay: 0s; }
+					}
+				}
+				.step-6 {
+					.title-step { transition-delay: 1s; }
+					.address-wrapper .address > div { transition-delay: 1s; }
+				}
+			}
+
+			// який результат треба отримати
+			.step-5 {
+				.title-step { opacity: 0; transform: translateY(-20px); }
+			}
+			.step-6 {
+				.title-step { opacity: 1; transform: translateY(0); }
+				.address-wrapper .address > div {
+					height: 17vw;
+				}
+			}
+		}
+
+
+
+		// для переходів по магелані
+		// .step-1 {
+		// 	.img-wrapper .img {
+		// 		&.img-1 { transition-delay: 1s; }
+		// 		&.img-2 { transition-delay: 1s; }
+		// 		&.img-3 { transition-delay: 1s; }
+		// 		&.img-4 { transition-delay: 1s; }
+		// 	}
+		// 	.text { transition-delay: 1s; }
+		// }
+		// .step-2 {
+		// 	.title-step { transition-delay: 1s; }
+		// 	.buttons-wrapper .home-button {
+		// 		&:nth-child(1) { transition-delay: 1s; }
+		// 		&:nth-child(2) { transition-delay: 1s; }
+		// 		&:nth-child(3) { transition-delay: 1s; }
+		// 	}
+		// 	.visualization { transition-delay: 1s; }
+		// 	.container { transition-delay: 1s; }
+		// }
+		// .step-3 {
+		// 	.step-3 {
+		// 		.title-step { transition-delay: 1s; }
+		// 		.item-wrapper .item {
+		// 			&.item-1 { transition-delay: 1s; }
+		// 			&.item-2 { transition-delay: 1s; }
+		// 			&.item-3 { transition-delay: 1s; }
+		// 		}
+		// 	}
+		// }
+		// .step-4 {
+		// 	.title-step { transition-delay: 1s; }
+		// 	.video-wrapper {
+		// 		.video {
+		// 			&.video-1 { transition-delay: 1s; }
+		// 			&.video-2 { transition-delay: 1s; }
+		// 			&.video-3 { transition-delay: 1s; }
+		// 		}
+		// 	}
+		// }
 	}
 
 	@import 'step-1';
 	@import 'step-2';
 	@import 'step-3';
 	@import 'step-4';
+	@import 'step-5';
+	@import 'step-6';
 
 }
