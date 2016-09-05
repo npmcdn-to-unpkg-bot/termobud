@@ -78,6 +78,7 @@ module.exports = function (grunt) {
                         'bower_components/masonry/dist/masonry.pkgd.min.js',
                         //'bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
                         //'bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
+                        'app/js/vendor/skrollr.min.js',
                         'app/js/vendor/hamster.js',
                         'app/js/vendor/wow.min.js',
                         'app/js/app/app.js'

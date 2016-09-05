@@ -199,6 +199,69 @@
 			transition: width 1.5s .8s ease;
 			right: 0;
 			width: 0;
+			.content {
+				width: calc(64vw + 22px);
+				padding: 1vw 0;
+				> div {
+					height: 23vh;
+					padding: 1px 1vw 1vw 3vw;
+					//outline: 1px solid red;
+					h3 {
+						position: relative;
+						margin: 1.5vw 0;
+							font-size: 20px;
+							text-transform: uppercase;
+						&:after {
+							content: '';
+							position: absolute;
+							top: 50%;
+							width: 10000px;
+							height: 1px;
+							background: #d7d7d7;
+							margin: 0 0 0 16px;
+						}
+					}
+					.texh-wrapper {
+						font-size: 0;
+						span {
+							display: inline-block;
+							vertical-align: top;
+							padding: 3vw 1vw 0;
+							max-width: 12vw;
+							min-height: 3vw;
+							min-width: 6vw;
+							outline: 1px solid red;
+							background-size: auto 2.6vw !important;
+								font-size: 16px;
+								text-align: center;
+								line-height: 130%;
+
+							// характеристики
+							&.vohnestiykist { background: image-url('ico.png') no-repeat center top; }
+							&.lehkist { background: image-url('ico.png') no-repeat center top; }
+							&.morozostiykist { background: image-url('ico.png') no-repeat center top; }
+							&.zvukoizolyatsiya { background: image-url('ico.png') no-repeat center top; }
+
+							// призначення
+							&.torhovelni { background: image-url('ico.png') no-repeat center top; }
+							&.promyslovi { background: image-url('ico.png') no-repeat center top; }
+							&.nezhytlovi { background: image-url('ico.png') no-repeat center top; }
+							&.nyzka-temperatura { background: image-url('ico.png') no-repeat center top; }
+							&.protypozhezhna-bezpeka { background: image-url('ico.png') no-repeat center top; }
+
+							// сертифікати
+							&.iso { background: image-url('ico.png') no-repeat center top; }
+							&.iso-2 { background: image-url('ico.png') no-repeat center top; }
+							&.cc { background: image-url('ico.png') no-repeat center top; }
+							&.test { background: image-url('ico.png') no-repeat center top; }
+							&.all-documents { background: image-url('ico.png') no-repeat center top; }
+
+							// технічний каталог
+							&.download { background: image-url('ico.png') no-repeat center top; }
+						}
+					}
+				}
+			}
 		}
 
 		&.open-details {

@@ -65,9 +65,9 @@
 				height: 0%;
 				width: calc(16.666666666666668% * 2 - 8px);
 				transition: height $duration 0s cubic-bezier(0.52, 0.09, 0.12, 1);
-				&.animated {
+				//&.animated {
 					height: 65%;
-				}
+				//}
 			}
 			&.item-4 { display: none;
 				top: 0;

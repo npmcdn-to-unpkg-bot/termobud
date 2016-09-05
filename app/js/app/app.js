@@ -9,6 +9,8 @@
 	window.addEventListener && window.addEventListener('DOMContentLoaded', function(){
 		document.body.className += ' dom-loaded';
 
+		var s = skrollr.init();
+
 		$('.blog .items-wrapper').masonry({
 			columnWidth: '.item'
 		});
@@ -84,6 +86,9 @@
 
 		scroll = Hamster(window).wheel(handler, false);
 		function handler(event, delta, deltaX, deltaY) {
+
+			// видалити специфічні стилі для слайдера в проектах
+			$('.home-page .step-5 .slider-wrapper').removeClass('new-translate');
 
 			// check if 1
 			if(name.attr('name') == 'page-1') {
@@ -250,17 +255,19 @@
 
 
 
-	// slider (home page)
+	// slider Projects (home page)
 	function sliderHome() {
-		var controll = $('.home-page .slider-wrapper .controls .controll'),
-			lengthElem = $('.home-page .slider-wrapper .items .item').length,
-			reviewsWrapper = $('.home-page .slider-wrapper .items');
+		var controll = $('.home-page .step-5 .slider-wrapper .controls .controll'),
+			lengthElem = $('.home-page .step-5 .slider-wrapper .items .item').length,
+			reviewsWrapper = $('.home-page .step-5 .slider-wrapper .items');
 
 		controll.on('click', function() {
 
+			$('.home-page .step-5 .slider-wrapper').addClass('new-translate');
+
 			if(!reviewsWrapper.hasClass('waiting')) {
-				var activeElement = $('.home-page .slider-wrapper .items .item.active'),
-					indexElem = $('.home-page .slider-wrapper .items .item.active').index();
+				var activeElement = $('.home-page .step-5 .slider-wrapper .items .item.active'),
+					indexElem = $('.home-page .step-5 .slider-wrapper .items .item.active').index();
 
 				// waiting
 				reviewsWrapper.addClass('waiting');
@@ -270,25 +277,25 @@
 
 				// prev
 				if($(this).hasClass('prev')) {
-					$('.home-page .slider-wrapper .items .item').removeClass('active');
+					$('.home-page .step-5 .slider-wrapper .items .item').removeClass('active');
 					setTimeout(function() {
 						// check position
 						if(indexElem >= 1) { // якщо не перший елемент
 							activeElement.prev('.item').addClass('active');
 						} else { // якщо перший
-							$('.home-page .slider-wrapper .items .item:last-child').addClass('active');
+							$('.home-page .step-5 .slider-wrapper .items .item:last-child').addClass('active');
 						}
 					}, 600)
 				}
 				// next
 				else {
-					$('.home-page .slider-wrapper .items .item').removeClass('active');
+					$('.home-page .step-5 .slider-wrapper .items .item').removeClass('active');
 					setTimeout(function() {
 						// ckeck position
 						if(indexElem < lengthElem-1) { // якщо не останній елемент
 							activeElement.next('.item').addClass('active');
 						} else { // якщо останній елемент
-							$('.home-page .slider-wrapper .items .item:first-child').addClass('active');
+							$('.home-page .step-5 .slider-wrapper .items .item:first-child').addClass('active');
 						}
 					}, 600)
 				}

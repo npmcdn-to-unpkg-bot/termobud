@@ -25,6 +25,14 @@
 		width: 100%;
 		height: 100%;
 
+		&.new-translate {
+			.items .item {
+				.description, .img.img-1, .img.img-2 {
+					transition-delay: 0s !important;
+				}
+			}
+		}
+
 		// prijects
 		.items {
 			pointer-events: none;

@@ -11,10 +11,10 @@ body {
 		line-height: 180%;
 }
 body > * {
-	transition: opacity .5s;
+	//transition: opacity .5s;
 }
 body:not(.loaded) > * {
-	opacity: 0;
+	//opacity: 0;
 }
 
 a {
